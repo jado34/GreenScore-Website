@@ -38,9 +38,9 @@ export function ImpactScrub() {
                 style={{ opacity, y }}
                 className="absolute inset-0 flex flex-col justify-center h-full pointer-events-none px-4"
               >
-                <span className="text-3xl md:text-4xl mb-4 md:mb-6">{step.emoji}</span>
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6 leading-tight">{step.title}</h2>
-                <p className="text-lg md:text-xl text-slate-400 leading-relaxed font-light">{step.desc}</p>
+                <span className="text-display-md md:text-display-lg mb-4 md:mb-6">{step.emoji}</span>
+                <h2 className="text-display-md md:text-display-xl lg:text-display-2xl font-black mb-4 md:mb-6 leading-tight text-primary-100">{step.title}</h2>
+                <p className="text-text-lg md:text-text-xl text-neutral-60 leading-relaxed font-light">{step.desc}</p>
               </motion.div>
             );
           })}
@@ -50,10 +50,10 @@ export function ImpactScrub() {
         <div className="flex-1 flex items-center justify-center relative scale-[0.7] sm:scale-[0.85] md:scale-100 transition-transform">
           <motion.div
             style={{ y: phoneY }}
-            className="relative w-[280px] h-[580px] rounded-[3.5rem] border-[8px] border-slate-800 bg-slate-900 shadow-[0_0_100px_rgba(16,185,129,0.15)] overflow-hidden"
+            className="relative w-[280px] h-[580px] rounded-2xl border-[8px] border-neutral-30 bg-neutral-20 shadow-elevation-3 overflow-hidden"
           >
             {/* Notch */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-slate-800 rounded-b-2xl z-50" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-neutral-30 rounded-b-2xl z-50" />
             
             {/* Mock Screen Content */}
             <div className="relative w-full h-full">
@@ -75,7 +75,7 @@ export function ImpactScrub() {
           </motion.div>
           
           {/* Decorative Glow */}
-          <div className="absolute w-[400px] h-[400px] bg-emerald-500/20 rounded-full blur-[80px] -z-10" />
+          <div className="absolute w-[400px] h-[400px] bg-primary-50/20 rounded-full blur-[80px] -z-10" />
         </div>
       </div>
     </section>

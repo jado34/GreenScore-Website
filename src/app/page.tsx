@@ -8,11 +8,11 @@ import { SmoothScroll } from '@/components/SmoothScroll';
 export default function LandingPage() {
   return (
     <SmoothScroll>
-      <main className="relative min-h-screen bg-slate-950 selection:bg-emerald-500/30">
+      <main className="relative min-h-screen bg-neutral-10 selection:bg-primary-50/30">
         {/* Cinematic Background */}
         <div className="fixed inset-0 z-0 pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-emerald-500/10 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-lime-500/10 blur-[120px] rounded-full" />
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-50/10 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent-50/10 blur-[120px] rounded-full" />
         </div>
 
         <Nav />
