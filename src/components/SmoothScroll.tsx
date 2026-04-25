@@ -1,5 +1,5 @@
 'use client';
-import { ReactLenis } from '@studio-freight/lenis/react';
+import { ReactLenis } from 'lenis/react';
 import { ReactNode } from 'react';
 
 export function SmoothScroll({ children }: { children: ReactNode }) {
