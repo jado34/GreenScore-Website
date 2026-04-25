@@ -1,7 +1,6 @@
 'use client';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Download } from 'lucide-react';
-
 export function Nav() {
   const { scrollY } = useScroll();
   const bgOpacity = useTransform(scrollY, [0, 50], [0, 1]);
@@ -13,7 +12,7 @@ export function Nav() {
       className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-[100] px-8 py-4 flex items-center justify-between rounded-2xl border border-primary-100/5 bg-neutral-10/50 backdrop-blur-xl transition-all"
     >
       <div className="flex items-center gap-3">
-         <img src="/logo.png" alt="GreenScore Logo" className="h-10 w-auto object-contain" />
+         <img src="/logo.png" alt="GreenScore Logo" className="h-16 md:h-20 w-auto object-contain transition-transform hover:scale-105" />
       </div>
 
       <div className="hidden md:flex items-center gap-8">
