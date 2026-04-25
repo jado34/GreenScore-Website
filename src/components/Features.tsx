@@ -1,41 +1,78 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Zap, Globe, Sparkles } from 'lucide-react';
+import { Car, Trash2, Leaf, Zap, ShieldCheck, Sparkles } from 'lucide-react';
 
-const FEATURES = [
-  { icon: ShieldCheck, title: "Verified Actions", desc: "Scientific data mapping from EPA & UNEP datasets." },
-  { icon: Zap, title: "Real-time Feedback", desc: "Instant haptics and celebrations for every green step." },
-  { icon: Globe, title: "Global Sync", desc: "Your data stays perfect across all your devices, forever." },
-  { icon: Sparkles, title: "Aesthetic Design", desc: "An interface meticulously crafted for joy and clarity." },
+const CATEGORIES = [
+  { icon: Car, title: "Transport", desc: "Track public transit, biking, and walking to reduce your carbon footprint." },
+  { icon: Trash2, title: "Waste", desc: "Log recycling, composting, and plastic-free choices in real-time." },
+  { icon: Leaf, title: "Food & Water", desc: "Monitor plant-based meals and water-saving habits daily." },
+  { icon: Zap, title: "Energy", desc: "Analyze energy-saving actions at home with science-backed metrics." },
 ];
 
 export function Features() {
   return (
-    <section className="w-full py-32 px-6">
+    <section className="w-full py-40 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24">
-          <h2 className="text-display-md md:text-display-lg font-black mb-6 text-primary-100">Engineered for Excellence.</h2>
-          <p className="text-text-lg md:text-text-xl text-neutral-60 font-light">Built by a team of obsessed engineers and designers.</p>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-display-md md:text-display-lg font-black mb-6 text-primary-100"
+          >
+            Smarter Habits. <br className="hidden md:block" /> Verified Impact.
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-text-lg md:text-text-xl text-neutral-60 font-light max-w-2xl mx-auto"
+          >
+            GreenScore uses scientific data mapping from **EPA** and **UNEP** datasets to turn your daily actions into tangible climate progress.
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {FEATURES.map((f, i) => (
+          {CATEGORIES.map((c, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-8 rounded-2xl border border-primary-100/5 bg-neutral-10/40 backdrop-blur-md hover:border-primary-50/30 transition-colors group"
+              className="p-8 rounded-2xl border border-primary-100/5 bg-neutral-10/40 backdrop-blur-md hover:border-primary-50/30 transition-all group"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary-50/10 flex items-center justify-center mb-6 group-hover:bg-primary-50/20 transition-colors">
-                <f.icon className="w-6 h-6 text-primary-50" />
+              <div className="w-14 h-14 rounded-xl bg-primary-50/10 flex items-center justify-center mb-8 group-hover:bg-primary-50/20 transition-colors">
+                <c.icon className="w-7 h-7 text-primary-50" />
               </div>
-              <h3 className="text-text-xl font-bold mb-4 text-primary-100">{f.title}</h3>
-              <p className="text-neutral-60 font-light leading-relaxed">{f.desc}</p>
+              <h3 className="text-text-xl font-bold mb-4 text-primary-100">{c.title}</h3>
+              <p className="text-neutral-60 font-light leading-relaxed text-text-sm">{c.desc}</p>
             </motion.div>
           ))}
         </div>
+        
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-24 p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-r from-primary-50/10 to-accent-50/5 border border-primary-50/10 flex flex-col md:flex-row items-center justify-between gap-8"
+        >
+          <div className="flex-1">
+            <div className="flex items-center gap-2 text-primary-50 font-bold mb-4">
+              <ShieldCheck className="w-5 h-5" />
+              <span>Scientific Methodology</span>
+            </div>
+            <h3 className="text-display-sm font-black text-primary-100 mb-4">Our Data Source</h3>
+            <p className="text-neutral-60 font-light max-w-xl">
+              Every action in GreenScore is calculated using emission factors and impact metrics sourced from the **U.S. Environmental Protection Agency (EPA)** and the **United Nations Environment Programme (UNEP)**.
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <div className="px-6 py-3 rounded-full bg-neutral-10/50 border border-primary-100/10 text-primary-100 text-text-xs font-bold uppercase tracking-wider">EPA Verified</div>
+            <div className="px-6 py-3 rounded-full bg-neutral-10/50 border border-primary-100/10 text-primary-100 text-text-xs font-bold uppercase tracking-wider">UNEP Standard</div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

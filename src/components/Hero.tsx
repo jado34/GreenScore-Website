@@ -32,7 +32,7 @@ export function Hero() {
         </h1>
         
         <p className="text-text-md sm:text-text-lg md:text-text-xl text-neutral-60 max-w-2xl mx-auto mb-10 md:mb-12 font-light leading-relaxed">
-          The award-winning tracker that turns environmental impact into a high-fidelity game. Build habits, grow forests, and change the planet.
+          Master 20+ daily habits and watch your impact grow. From <strong>Seedling</strong> to <strong>Forest</strong>, track your journey with science-backed metrics and cinematic rewards.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">

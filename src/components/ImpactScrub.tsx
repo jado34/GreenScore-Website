@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 const STEPS = [
-  { title: "Log with Ease", desc: "Instantly record your green actions with a single tap. Simplified categories for a complex world.", emoji: "⚡" },
+  { title: "Log with Ease", desc: "Select from 20+ curated green actions across transport, food, and energy. One tap to record your progress.", emoji: "⚡" },
   { title: "Earn Rewards", desc: "Gain GreenScore points and unlock exclusive cinematic badges as your impact grows.", emoji: "🏆" },
   { title: "See the Difference", desc: "Visualize your saved CO2 and water in your personal, growing 2D Forest map.", emoji: "🌳" },
 ];

@@ -25,7 +25,7 @@ export default function LandingPage() {
         </div>
 
         <footer className="w-full py-12 px-8 flex flex-col md:flex-row items-center justify-between border-t border-white/5 opacity-50">
-           <div className="text-sm font-medium">© 2026 GreenScore Technologies.</div>
+           <div className="text-sm font-medium">© 2026 GreenScore. Developed by Team 10.</div>
            <div className="flex gap-8 mt-6 md:mt-0">
              <a href="#" className="text-xs hover:text-white transition-colors">Privacy</a>
              <a href="#" className="text-xs hover:text-white transition-colors">Terms</a>
