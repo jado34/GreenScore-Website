@@ -23,11 +23,11 @@ export function ImpactScrub() {
   ];
 
   return (
-    <section ref={containerRef} className="relative w-full h-[300vh] px-6">
+    <section id="methodology" ref={containerRef} className="relative w-full h-[300vh] px-6">
       <div className="sticky top-0 h-screen w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 overflow-hidden">
         
         {/* Text Section */}
-        <div className="flex-1 max-w-xl z-20 w-full text-center lg:text-left">
+        <div className="flex-1 max-w-xl z-20 w-full h-1/2 lg:h-full relative flex items-center justify-center">
           {STEPS.map((step, i) => {
             const opacity = useScrollOpacity(scrollYProgress, i);
             const y = useScrollY(scrollYProgress, i);
@@ -36,7 +36,7 @@ export function ImpactScrub() {
               <motion.div
                 key={i}
                 style={{ opacity, y }}
-                className="absolute inset-0 flex flex-col justify-center h-full pointer-events-none px-4"
+                className="absolute inset-0 flex flex-col justify-center items-center lg:items-start text-center lg:text-left pointer-events-none px-4"
               >
                 <span className="text-display-md md:text-display-lg mb-4 md:mb-6">{step.emoji}</span>
                 <h2 className="text-display-md md:text-display-xl lg:text-display-2xl font-black mb-4 md:mb-6 leading-tight text-primary-100">{step.title}</h2>
@@ -47,7 +47,7 @@ export function ImpactScrub() {
         </div>
 
         {/* Phone Section (Optimized for Mobile Viewport) */}
-        <div className="flex-1 flex items-center justify-center relative scale-[0.7] sm:scale-[0.85] md:scale-100 transition-transform">
+        <div className="flex-1 w-full h-1/2 lg:h-full flex items-center justify-center relative scale-[0.6] sm:scale-[0.8] md:scale-90 lg:scale-100 transition-transform">
           <motion.div
             style={{ y: phoneY }}
             className="relative w-[280px] h-[580px] rounded-2xl border-[8px] border-neutral-30 bg-neutral-20 shadow-elevation-3 overflow-hidden"

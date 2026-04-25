@@ -11,14 +11,14 @@ const CATEGORIES = [
 
 export function Features() {
   return (
-    <section className="w-full py-40 px-6">
+    <section id="features" className="w-full py-40 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-display-md md:text-display-lg font-black mb-6 text-primary-100"
+            className="text-display-md md:text-display-lg font-black mb-6 text-primary-100 text-balance"
           >
             Smarter Habits. <br className="hidden md:block" /> Verified Impact.
           </motion.h2>
@@ -33,14 +33,28 @@ export function Features() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.div 
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1
+              }
+            }
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
           {CATEGORIES.map((c, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0 }
+              }}
               className="p-8 rounded-2xl border border-primary-100/5 bg-neutral-10/40 backdrop-blur-md hover:border-primary-50/30 transition-all group"
             >
               <div className="w-14 h-14 rounded-xl bg-primary-50/10 flex items-center justify-center mb-8 group-hover:bg-primary-50/20 transition-colors">
@@ -50,7 +64,7 @@ export function Features() {
               <p className="text-neutral-60 font-light leading-relaxed text-text-sm">{c.desc}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
         
         <motion.div 
           initial={{ opacity: 0 }}

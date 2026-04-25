@@ -4,6 +4,7 @@ import { Features } from '@/components/Features';
 import { ImpactScrub } from '@/components/ImpactScrub';
 import { CTA, Nav } from '@/components/Nav';
 import { SmoothScroll } from '@/components/SmoothScroll';
+import { ImageGallery } from '@/components/ImageGallery';
 
 export default function LandingPage() {
   return (
@@ -21,6 +22,7 @@ export default function LandingPage() {
           <Hero />
           <ImpactScrub />
           <Features />
+          <ImageGallery />
           <CTA />
         </div>
 
