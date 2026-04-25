@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "../../design-tokens.css";
+
+@theme {
+  /* Colors */
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-secondary: var(--color-brand-secondary);
+  --color-brand-tertiary: var(--color-brand-tertiary);
+  --color-brand-neutral: var(--color-brand-neutral);
+  --color-brand-accent: var(--color-brand-accent);
+  --color-brand-error: var(--color-brand-error);
+  --color-brand-warning: var(--color-brand-warning);
+  --color-brand-success: var(--color-brand-success);
+
+  /* Palette - Primary */
+  --color-primary-0: var(--color-primary-0);
+  --color-primary-10: var(--color-primary-10);
+  --color-primary-20: var(--color-primary-20);
+  --color-primary-30: var(--color-primary-30);
+  --color-primary-40: var(--color-primary-40);
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-60: var(--color-primary-60);
+  --color-primary-70: var(--color-primary-70);
+  --color-primary-80: var(--color-primary-80);
+  --color-primary-90: var(--color-primary-90);
+  --color-primary-95: var(--color-primary-95);
+  --color-primary-98: var(--color-primary-98);
+  --color-primary-99: var(--color-primary-99);
+  --color-primary-100: var(--color-primary-100);
+
+  /* Palette - Neutral */
+  --color-neutral-0: var(--color-neutral-0);
+  --color-neutral-10: var(--color-neutral-10);
+  --color-neutral-20: var(--color-neutral-20);
+  --color-neutral-30: var(--color-neutral-30);
+  --color-neutral-40: var(--color-neutral-40);
+  --color-neutral-50: var(--color-neutral-50);
+  --color-neutral-60: var(--color-neutral-60);
+  --color-neutral-70: var(--color-neutral-70);
+  --color-neutral-80: var(--color-neutral-80);
+  --color-neutral-90: var(--color-neutral-90);
+  --color-neutral-95: var(--color-neutral-95);
+  --color-neutral-98: var(--color-neutral-98);
+  --color-neutral-99: var(--color-neutral-99);
+  --color-neutral-100: var(--color-neutral-100);
+
+  /* Semantic Roles */
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-primary-container: var(--color-primary-container);
+  --color-on-primary-container: var(--color-on-primary-container);
+  
+  --color-secondary: var(--color-secondary);
+  --color-on-secondary: var(--color-on-secondary);
+  --color-secondary-container: var(--color-secondary-container);
+  --color-on-secondary-container: var(--color-on-secondary-container);
+
+  --color-neutral-role: var(--color-neutral);
+  --color-on-neutral: var(--color-on-neutral);
+
+  /* Typography */
+  --font-sans: var(--font-sans);
+  
+  --font-size-display-2xl: var(--font-size-display-2xl);
+  --font-size-display-xl: var(--font-size-display-xl);
+  --font-size-display-lg: var(--font-size-display-lg);
+  --font-size-display-md: var(--font-size-display-md);
+  --font-size-display-sm: var(--font-size-display-sm);
+
+  --font-size-text-xl: var(--font-size-text-xl);
+  --font-size-text-lg: var(--font-size-text-lg);
+  --font-size-text-md: var(--font-size-text-md);
+  --font-size-text-sm: var(--font-size-text-sm);
+  --font-size-text-xs: var(--font-size-text-xs);
+
+  /* Line Heights */
+  --leading-display-2xl: var(--line-height-display-2xl);
+  --leading-display-xl: var(--line-height-display-xl);
+  --leading-display-lg: var(--line-height-display-lg);
+  --leading-display-md: var(--line-height-display-md);
+  --leading-display-sm: var(--line-height-display-sm);
+
+  /* Radii */
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-10 text-neutral-90 antialiased font-sans;
+  }
+}

@@ -1,0 +1,363 @@
+/*
+ * ─────────────────────────────────────────────────────────────────────────────
+ * GreenScore Design Tokens — CSS Custom Properties
+ * Auto-generated from design-tokens.tokens.json
+ *
+ * Import this file in your root CSS / main entry point:
+ *   @import './styles/design-tokens.css';
+ *
+ * All values are also available via Tailwind classes defined in tailwind.config.js
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+
+/* ─── Google Font ──────────────────────────────────────────────────────────── */
+/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap'); */
+
+:root {
+
+  /* ── Font Family ─────────────────────────────────────────────────────────── */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* ── Typography Scale ────────────────────────────────────────────────────── */
+  /* font-size / line-height / letter-spacing */
+  --font-size-display-2xl: 4.5rem;
+  /* 72px  */
+  --line-height-display-2xl: 5.5rem;
+  /* 88px  */
+  --letter-spacing-display-2xl: -0.02em;
+
+  --font-size-display-xl: 3.75rem;
+  /* 60px  */
+  --line-height-display-xl: 4.5rem;
+  /* 72px  */
+  --letter-spacing-display-xl: -0.02em;
+
+  --font-size-display-lg: 3rem;
+  /* 48px  */
+  --line-height-display-lg: 3.75rem;
+  /* 60px  */
+  --letter-spacing-display-lg: -0.02em;
+
+  --font-size-display-md: 2.25rem;
+  /* 36px  */
+  --line-height-display-md: 2.75rem;
+  /* 44px  */
+  --letter-spacing-display-md: -0.02em;
+
+  --font-size-display-sm: 1.875rem;
+  /* 30px  */
+  --line-height-display-sm: 2.25rem;
+  /* 36px  */
+  --letter-spacing-display-sm: 0em;
+
+  --font-size-text-xl: 1.25rem;
+  /* 20px  */
+  --line-height-text-xl: 1.875rem;
+  /* 30px  */
+  --letter-spacing-text-xl: 0em;
+
+  --font-size-text-lg: 1.125rem;
+  /* 18px  */
+  --line-height-text-lg: 1.75rem;
+  /* 28px  */
+  --letter-spacing-text-lg: 0em;
+
+  --font-size-text-md: 1rem;
+  /* 16px  */
+  --line-height-text-md: 1.5rem;
+  /* 24px  */
+  --letter-spacing-text-md: 0em;
+
+  --font-size-text-sm: 0.875rem;
+  /* 14px  */
+  --line-height-text-sm: 1.25rem;
+  /* 20px  */
+  --letter-spacing-text-sm: 0em;
+
+  --font-size-text-xs: 0.75rem;
+  /* 12px  */
+  --line-height-text-xs: 1.125rem;
+  /* 18px  */
+  --letter-spacing-text-xs: 0em;
+
+  /* ── Font Weights ────────────────────────────────────────────────────────── */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ======================================================================== */
+  /* KEY / BRAND PRIMITIVES                                                     */
+  /* ======================================================================== */
+  --color-brand-primary: #2e7d32;
+  --color-brand-secondary: #66bb6a;
+  --color-brand-tertiary: #8d6e63;
+  --color-brand-neutral: #fafafa;
+  --color-brand-accent: #aeea00;
+  --color-brand-error: #e53935;
+  --color-brand-warning: #ffc107;
+  --color-brand-success: #00c853;
+
+  /* ======================================================================== */
+  /* PRIMARY PALETTE                                                            */
+  /* ======================================================================== */
+  --color-primary-0: #000000;
+  --color-primary-10: #0e250f;
+  --color-primary-20: #1b4b1e;
+  --color-primary-30: #29702d;
+  --color-primary-40: #37953c;
+  --color-primary-50: #45ba4b;
+  --color-primary-60: #6ac86f;
+  --color-primary-70: #8fd693;
+  --color-primary-80: #b4e4b7;
+  --color-primary-90: #daf1db;
+  --color-primary-95: #ecf8ed;
+  --color-primary-98: #f8fcf8;
+  --color-primary-99: #fbfefb;
+  --color-primary-100: #ffffff;
+
+  /* ======================================================================== */
+  /* SECONDARY PALETTE                                                          */
+  /* ======================================================================== */
+  --color-secondary-0: #000000;
+  --color-secondary-10: #102311;
+  --color-secondary-20: #1f4721;
+  --color-secondary-30: #2f6a32;
+  --color-secondary-40: #3f8d42;
+  --color-secondary-50: #4eb153;
+  --color-secondary-60: #72c075;
+  --color-secondary-70: #95d098;
+  --color-secondary-80: #b8e0ba;
+  --color-secondary-90: #dcefdd;
+  --color-secondary-95: #edf7ee;
+  --color-secondary-98: #f8fcf8;
+  --color-secondary-99: #fbfdfc;
+  --color-secondary-100: #ffffff;
+
+  /* ======================================================================== */
+  /* TERTIARY PALETTE                                                           */
+  /* ======================================================================== */
+  --color-tertiary-0: #000000;
+  --color-tertiary-10: #1e1715;
+  --color-tertiary-20: #3c2f2a;
+  --color-tertiary-30: #5a463f;
+  --color-tertiary-40: #785d54;
+  --color-tertiary-50: #967569;
+  --color-tertiary-60: #ab9087;
+  --color-tertiary-70: #c0aca5;
+  --color-tertiary-80: #d5c8c3;
+  --color-tertiary-90: #eae3e1;
+  --color-tertiary-95: #f4f1f0;
+  --color-tertiary-98: #fbf9f9;
+  --color-tertiary-99: #fdfcfc;
+  --color-tertiary-100: #ffffff;
+
+  /* ======================================================================== */
+  /* NEUTRAL PALETTE                                                            */
+  /* ======================================================================== */
+  --color-neutral-0: #000000;
+  --color-neutral-10: #191919;
+  --color-neutral-20: #333333;
+  --color-neutral-30: #4c4c4c;
+  --color-neutral-40: #666666;
+  --color-neutral-50: #808080;
+  --color-neutral-60: #999999;
+  --color-neutral-70: #b3b3b3;
+  --color-neutral-80: #cccccc;
+  --color-neutral-90: #e6e6e6;
+  --color-neutral-95: #f2f2f2;
+  --color-neutral-98: #fafafa;
+  --color-neutral-99: #fcfcfc;
+  --color-neutral-100: #ffffff;
+
+  /* ======================================================================== */
+  /* ACCENT PALETTE                                                             */
+  /* ======================================================================== */
+  --color-accent-0: #000000;
+  --color-accent-10: #263300;
+  --color-accent-20: #4c6600;
+  --color-accent-30: #729900;
+  --color-accent-40: #98cc00;
+  --color-accent-50: #beff00;
+  --color-accent-60: #cbff33;
+  --color-accent-70: #d8ff66;
+  --color-accent-80: #e5ff99;
+  --color-accent-90: #f2ffcc;
+  --color-accent-95: #f8ffe5;
+  --color-accent-98: #fcfff5;
+  --color-accent-99: #fefffа;
+  --color-accent-100: #ffffff;
+
+  /* ======================================================================== */
+  /* ERROR PALETTE                                                              */
+  /* ======================================================================== */
+  --color-error-0: #000000;
+  --color-error-10: #2d0706;
+  --color-error-20: #5a0d0c;
+  --color-error-30: #881411;
+  --color-error-40: #b51b17;
+  --color-error-50: #e2221d;
+  --color-error-60: #e84e4a;
+  --color-error-70: #ee7a77;
+  --color-error-80: #f3a6a5;
+  --color-error-90: #f9d3d2;
+  --color-error-95: #fce9e8;
+  --color-error-98: #fef6f6;
+  --color-error-99: #fefbfa;
+  --color-error-100: #ffffff;
+
+  /* ======================================================================== */
+  /* WARNING PALETTE                                                            */
+  /* ======================================================================== */
+  --color-warning-0: #000000;
+  --color-warning-10: #332600;
+  --color-warning-20: #664c00;
+  --color-warning-30: #997300;
+  --color-warning-40: #cc9900;
+  --color-warning-50: #ffbf00;
+  --color-warning-60: #ffcc33;
+  --color-warning-70: #ffd966;
+  --color-warning-80: #ffe599;
+  --color-warning-90: #fff2cc;
+  --color-warning-95: #fff9e5;
+  --color-warning-98: #fffcf5;
+  --color-warning-99: #fffefa;
+  --color-warning-100: #ffffff;
+
+  /* ======================================================================== */
+  /* SUCCESS PALETTE                                                            */
+  /* ======================================================================== */
+  --color-success-0: #000000;
+  --color-success-10: #003315;
+  --color-success-20: #00662a;
+  --color-success-30: #00993f;
+  --color-success-40: #00cc55;
+  --color-success-50: #00ff6a;
+  --color-success-60: #33ff88;
+  --color-success-70: #66ffa5;
+  --color-success-80: #99ffc3;
+  --color-success-90: #ccffe1;
+  --color-success-95: #e5fff0;
+  --color-success-98: #f5fff9;
+  --color-success-99: #fafffс;
+  --color-success-100: #ffffff;
+
+  /* ======================================================================== */
+  /* SEMANTIC / ROLE-BASED COLOR TOKENS                                         */
+  /* ======================================================================== */
+
+  /* Primary roles */
+  --color-primary: var(--color-primary-40);
+  /* #37953c */
+  --color-on-primary: var(--color-primary-30);
+  /* #29702d */
+  --color-primary-container: var(--color-primary-90);
+  /* #daf1db */
+  --color-on-primary-container: var(--color-primary-10);
+  /* #0e250f */
+
+  /* Secondary roles */
+  --color-secondary: var(--color-secondary-40);
+  /* #3f8d42 */
+  --color-on-secondary: var(--color-secondary-100);
+  /* #ffffff */
+  --color-secondary-container: var(--color-secondary-90);
+  /* #dcefdd */
+  --color-on-secondary-container: var(--color-secondary-30);
+  /* #2f6a32 */
+
+  /* Tertiary roles */
+  --color-tertiary: var(--color-tertiary-40);
+  /* #785d54 */
+  --color-on-tertiary: var(--color-tertiary-100);
+  /* #ffffff */
+  --color-tertiary-container: var(--color-tertiary-90);
+  /* #eae3e1 */
+  --color-on-tertiary-container: var(--color-tertiary-30);
+  /* #5a463f */
+
+  /* Neutral roles */
+  --color-neutral: var(--color-neutral-30);
+  /* #4c4c4c */
+  --color-on-neutral: var(--color-neutral-90);
+  /* #e6e6e6 */
+  --color-neutral-container: var(--color-neutral-40);
+  /* #666666 */
+  --color-on-neutral-container: var(--color-neutral-98);
+  /* #fafafa */
+
+  /* Accent roles */
+  --color-accent: var(--color-accent-20);
+  /* #4c6600 */
+  --color-on-accent: var(--color-accent-90);
+  /* #f2ffcc */
+  --color-accent-container: var(--color-accent-80);
+  /* #e5ff99 */
+  --color-on-accent-container: var(--color-accent-10);
+  /* #263300 */
+
+  /* Error roles */
+  --color-error: var(--color-error-40);
+  /* #b51b17 */
+  --color-on-error: var(--color-error-100);
+  /* #ffffff */
+  --color-error-container: var(--color-error-90);
+  /* #f9d3d2 */
+  --color-on-error-container: var(--color-error-30);
+  /* #881411 */
+
+  /* Success roles */
+  --color-success: var(--color-success-30);
+  /* #00993f */
+  --color-on-success: var(--color-success-90);
+  /* #ccffe1 */
+  --color-success-container: var(--color-success-70);
+  /* #66ffa5 */
+  --color-on-success-container: var(--color-success-20);
+  /* #00662a */
+
+  /* Warning roles */
+  --color-warning: var(--color-warning-50);
+  /* #ffbf00 */
+  --color-on-warning: var(--color-warning-90);
+  /* #fff2cc */
+  --color-warning-container: var(--color-warning-60);
+  /* #ffcc33 */
+  --color-on-warning-container: var(--color-warning-95);
+  /* #fff9e5 */
+
+  /* ── Grid Spacing ────────────────────────────────────────────────────────── */
+  --grid-gutter: 1rem;
+  /* 16px  — both mobile & tablet */
+  --grid-offset-mobile: 1rem;
+  /* 16px  — mobile */
+  --grid-offset-tablet: 2rem;
+  /* 32px  — tablet */
+  --grid-cols-mobile: 4;
+  --grid-cols-tablet: 8;
+  --grid-cols-desktop: 12;
+
+  /* ── Material Elevation Shadows ──────────────────────────────────────────── */
+  --shadow-elevation-1: 0px 1px 2px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --shadow-elevation-2: 0px 1px 2px rgba(0, 0, 0, 0.30), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --shadow-elevation-3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.30);
+  --shadow-elevation-4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.30);
+  --shadow-elevation-5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.30);
+
+  /* ── Border Radius (Material Design 3 shape scale) ───────────────────────── */
+  --radius-none: 0px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 28px;
+  --radius-full: 9999px;
+}
+
+/* ─── Base Typography Reset ──────────────────────────────────────────────── */
+html {
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-neutral);
+}
