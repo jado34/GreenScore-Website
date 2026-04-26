@@ -4,7 +4,6 @@ import { Nav, CTA } from '@/components/Nav';
 import { SmoothScroll } from '@/components/SmoothScroll';
 import { AboutHero } from '@/components/AboutHero';
 import { AboutMission } from '@/components/AboutMission';
-import { AboutTeam } from '@/components/AboutTeam';
 import { motion } from 'framer-motion';
 
 function Reveal({ children }: { children: React.ReactNode }) {
@@ -34,9 +33,6 @@ export default function AboutPage() {
             <AboutMission />
           </Reveal>
 
-          <Reveal>
-            <AboutTeam />
-          </Reveal>
 
           <Reveal>
             <CTA />
