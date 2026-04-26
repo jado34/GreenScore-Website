@@ -1,87 +1,70 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import Lottie from 'lottie-react';
+import React from 'react';
 import { motion } from 'framer-motion';
-
-function LottieWrapper({ url }: { url: string }) {
-  const [animationData, setAnimationData] = useState<any>(null);
-
-  useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setAnimationData(data))
-      .catch((err) => console.error("Error loading Lottie:", err));
-  }, [url]);
-
-  if (!animationData) return <div className="w-full h-full bg-primary-100/5 animate-pulse rounded-full" />;
-
-  return (
-    <Lottie 
-      animationData={animationData}
-      loop={true}
-      className="w-full h-full"
-    />
-  );
-}
 
 const LEVELS = [
   {
     title: "Seedling",
-    desc: "Your journey begins. Every small action counts.",
-    lottieUrl: "https://lottie.host/6c1f1f1d-2b4a-4b9a-8c5e-88c9a3f9d5d9/7vY6vX6vX6.json", // Replace with real growth Lottie
+    desc: "Your journey begins. The first step towards a greener future.",
+    image: "/images/levels/seedling.jpg",
     requirement: "0 - 100 Points"
   },
   {
+    title: "Sprout",
+    desc: "A sign of life! Your green habits are taking root.",
+    image: "/images/levels/sprout.jpg",
+    requirement: "101 - 300 Points"
+  },
+  {
     title: "Sapling",
-    desc: "You're growing! Your habits are becoming second nature.",
-    lottieUrl: "https://lottie.host/6c1f1f1d-2b4a-4b9a-8c5e-88c9a3f9d5d9/7vY6vX6vX6.json",
-    requirement: "101 - 500 Points"
+    desc: "You're growing! Your consistency is inspiring others.",
+    image: "/images/levels/sapling.jpg",
+    requirement: "301 - 800 Points"
   },
   {
-    title: "Ancient Oak",
-    desc: "A pillar of the community. Your impact is visible to all.",
-    lottieUrl: "https://lottie.host/6c1f1f1d-2b4a-4b9a-8c5e-88c9a3f9d5d9/7vY6vX6vX6.json",
-    requirement: "501 - 2000 Points"
+    title: "Tree",
+    desc: "A pillar of change. Your impact is clear and significant.",
+    image: "/images/levels/tree.jpg",
+    requirement: "801 - 2000 Points"
   },
   {
-    title: "Eternal Forest",
-    desc: "Master of Sustainability. You've inspired a movement.",
-    lottieUrl: "https://lottie.host/6c1f1f1d-2b4a-4b9a-8c5e-88c9a3f9d5d9/7vY6vX6vX6.json",
+    title: "Forest",
+    desc: "Master of Sustainability. You are a force of nature.",
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1200",
     requirement: "2000+ Points"
   }
 ];
 
 export function LevelProgress() {
   return (
-    <section id="levels" className="w-full py-40 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="levels" className="w-full py-40 px-6 bg-background">
+      <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-24">
           <h2 className="text-display-md md:text-display-lg font-black text-foreground mb-6 uppercase tracking-tighter">
             Your Growth, <br /> Visualized.
           </h2>
           <p className="text-text-lg text-foreground/60 font-light max-w-2xl mx-auto">
-            As you log habits, your personal ecosystem evolves. From a tiny seedling to an eternal forest, track your progress through cinematic animations.
+            As you log habits, your personal ecosystem evolves. From a tiny seedling to a vast forest, track your progress through cinematic growth stages.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-6">
           {LEVELS.map((level, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               className="relative group"
             >
-              <div className="aspect-square w-full rounded-[3rem] bg-foreground/5 border border-foreground/10 flex items-center justify-center overflow-hidden mb-8 shadow-elevation-2 group-hover:shadow-elevation-4 transition-all duration-500">
-                {/* Lottie Container */}
-                <div className="w-48 h-48">
-                  <LottieWrapper url={level.lottieUrl} />
-                </div>
-                
-                {/* Decorative background glow */}
-                <div className="absolute inset-0 bg-primary-100/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="aspect-[4/5] w-full rounded-[2.5rem] bg-foreground/5 border border-foreground/10 flex items-center justify-center overflow-hidden mb-8 shadow-elevation-1 group-hover:shadow-elevation-3 transition-all duration-500 relative">
+                <img 
+                  src={level.image} 
+                  alt={level.title} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
               </div>
 
               <div className="text-center">

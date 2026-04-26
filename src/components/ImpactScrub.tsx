@@ -3,9 +3,9 @@ import { motion, useScroll, useTransform, useVelocity, useSpring } from 'framer-
 import { useRef } from 'react';
 
 const STEPS = [
-  { title: "Log with Ease", desc: "Select from 20+ curated green actions across transport, food, and energy. One tap to record your progress.", emoji: "⚡" },
-  { title: "Earn Rewards", desc: "Gain GreenScore points and unlock exclusive cinematic badges as your impact grows.", emoji: "🏆" },
-  { title: "See the Difference", desc: "Visualize your saved CO2 and water in your personal, growing 2D Forest map.", emoji: "🌳" },
+  { title: "Log with Ease", desc: "Our intuitive interface lets you record transport, food, and energy habits in under 5 seconds. Frictionless logging for maximum consistency.", emoji: "⚡", hotspot: { x: "20%", y: "40%", label: "Quick Log" } },
+  { title: "Earn Rewards", desc: "Gamify your growth. Earn GreenPoints for every action and unlock exclusive cinematic badges as you reach new impact milestones.", emoji: "🏆", hotspot: { x: "75%", y: "25%", label: "Achievements" } },
+  { title: "See the Difference", desc: "Experience your progress through our 2D Forest map. Watch your ecosystem thrive as you save CO2 and water in real-time.", emoji: "🌳", hotspot: { x: "50%", y: "75%", label: "Live Impact" } },
 ];
 
 export function ImpactScrub() {
@@ -59,11 +59,11 @@ export function ImpactScrub() {
                 style={{ opacity, y }}
                 className="absolute inset-0 flex flex-col justify-center items-center lg:items-start text-center lg:text-left pointer-events-none px-4"
               >
-                <span className="text-display-md md:text-display-lg mb-4 md:mb-6 drop-shadow-xl">{step.emoji}</span>
+                <span className="text-display-md md:text-display-lg mb-4 md:mb-6">{step.emoji}</span>
                 <h2 className="text-display-md md:text-display-xl lg:text-display-2xl font-black mb-4 md:mb-6 leading-tight text-foreground uppercase tracking-tighter">
                   {step.title}
                 </h2>
-                <p className="text-text-lg md:text-text-xl text-foreground/60 leading-relaxed font-light max-w-md">
+                <p className="text-text-lg md:text-text-xl text-muted-foreground leading-relaxed font-light max-w-md">
                   {step.desc}
                 </p>
               </motion.div>
@@ -78,11 +78,11 @@ export function ImpactScrub() {
               rotateX: tiltY,
               rotateY: tiltX,
             }}
-            className="relative w-[280px] h-[580px] rounded-[3rem] border-[12px] border-neutral-30 bg-neutral-20 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden"
+            className="relative w-[280px] h-[580px] rounded-[3.5rem] border-[12px] border-muted bg-card shadow-2xl overflow-hidden"
           >
             {/* Notch */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-8 bg-neutral-30 rounded-b-3xl z-50 flex items-center justify-center">
-               <div className="w-12 h-1 bg-neutral-20 rounded-full" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-8 bg-muted rounded-b-3xl z-50 flex items-center justify-center">
+               <div className="w-10 h-1 bg-background/20 rounded-full" />
             </div>
             
             {/* Mock Screen Content */}
@@ -93,12 +93,30 @@ export function ImpactScrub() {
                   [0, 1, 1, 0]
                 );
                 return (
-                  <motion.img
-                    key={i}
-                    src={src}
-                    style={{ opacity: imgOpacity }}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
+                  <div key={i}>
+                    <motion.img
+                      src={src}
+                      style={{ opacity: imgOpacity }}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    {/* Hotspot */}
+                    <motion.div
+                      style={{ 
+                        opacity: imgOpacity,
+                        left: STEPS[i].hotspot.x,
+                        top: STEPS[i].hotspot.y,
+                      }}
+                      className="absolute z-40"
+                    >
+                      <span className="flex h-4 w-4 relative">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-50 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-4 w-4 bg-primary-50"></span>
+                      </span>
+                      <div className="absolute top-6 left-1/2 -translate-x-1/2 px-3 py-1 bg-background/90 backdrop-blur-md rounded-full border border-foreground/10 text-[8px] font-bold uppercase tracking-wider whitespace-nowrap text-foreground shadow-lg">
+                        {STEPS[i].hotspot.label}
+                      </div>
+                    </motion.div>
+                  </div>
                 );
               })}
             </div>

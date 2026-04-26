@@ -27,7 +27,7 @@ export function Preloader() {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ y: '-100%', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
-          className="fixed inset-0 z-[20000] bg-neutral-10 flex flex-col items-center justify-center"
+          className="fixed inset-0 z-[20000] bg-background flex flex-col items-center justify-center"
         >
           <div className="relative w-40 h-40 flex items-center justify-center">
              <motion.div 
@@ -50,7 +50,7 @@ export function Preloader() {
                  stroke="currentColor"
                  strokeWidth="2"
                  fill="transparent"
-                 className="text-primary-100/10"
+                 className="text-foreground/10"
                />
                <motion.circle
                  cx="80"
@@ -61,7 +61,7 @@ export function Preloader() {
                  fill="transparent"
                  strokeDasharray="440"
                  animate={{ strokeDashoffset: 440 - (440 * count) / 100 }}
-                 className="text-primary-100"
+                 className="text-primary-50"
                />
              </svg>
           </div>
@@ -72,14 +72,14 @@ export function Preloader() {
             className="mt-12 overflow-hidden"
           >
             <motion.span 
-              className="block text-display-sm font-black text-primary-100 italic"
+              className="block text-display-sm font-black text-foreground italic"
             >
               {count}%
             </motion.span>
           </motion.div>
 
           <div className="absolute bottom-12 text-center">
-            <span className="text-text-xs font-bold uppercase tracking-[0.3em] text-neutral-60">
+            <span className="text-text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground">
               Initializing Ecosystem
             </span>
           </div>

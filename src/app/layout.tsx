@@ -41,6 +41,12 @@ export const metadata: Metadata = {
     description: "The award-winning sustainability tracker. Master 20+ daily habits and watch your impact grow from Seedling to Forest.",
     images: ["/og-image.jpg"],
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+  metadataBase: new URL("https://greenscore.earth"),
 };
 
 
