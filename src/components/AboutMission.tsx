@@ -17,13 +17,13 @@ export function AboutMission() {
   return (
     <section ref={containerRef} className="relative py-40 w-full px-6 lg:px-24 flex items-center justify-center bg-background z-10">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-display-sm md:text-display-lg font-black text-foreground mb-8 text-balance flex flex-wrap gap-x-3 gap-y-2">
+        <h2 className="text-display-md md:text-display-xl lg:text-display-2xl font-black text-foreground mb-8 leading-tight tracking-tight text-balance flex flex-wrap gap-x-3 gap-y-2">
           {words.map((word, i) => {
             const start = i / words.length;
             const end = start + (1 / words.length);
             
             // eslint-disable-next-line react-hooks/rules-of-hooks
-            const opacity = useTransform(scrollYProgress, [start, end], [0.1, 1]);
+            const opacity = useTransform(scrollYProgress, [start, end], [0.3, 1]);
             
             return (
               <motion.span key={i} style={{ opacity }} className="inline-block">

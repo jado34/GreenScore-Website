@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Download, Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
 import { Magnetic } from './Magnetic';
 
 export function Nav() {
@@ -15,10 +16,10 @@ export function Nav() {
   const y = useTransform(scrollY, [0, 50], [0, -4]);
 
   const navLinks = [
-    { name: 'About', href: '/about' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
     { name: 'Features', href: '/#features' },
-    { name: 'Methodology', href: '/#methodology' },
-    { name: 'Gallery', href: '/#gallery' },
+    { name: 'Impact', href: '/#methodology' },
   ];
 
   return (
@@ -28,24 +29,26 @@ export function Nav() {
         className="fixed top-8 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-[100] backdrop-blur-md bg-background/80 border border-foreground/10 rounded-3xl px-8 py-5 flex items-center justify-between transition-colors duration-500 shadow-elevation-2"
       >
         <div className="flex items-center min-w-[140px]">
-           <img 
-              src="/logo.png" 
-              alt="GreenScore Logo" 
-              className="w-[140px] md:w-[180px] h-[48px] md:h-[56px] object-contain transition-transform hover:scale-105" 
-            />
+           <Link href="/">
+             <img 
+                src="/logo.png" 
+                alt="GreenScore Logo" 
+                className="w-[140px] md:w-[180px] h-[48px] md:h-[56px] object-contain transition-transform hover:scale-105" 
+              />
+           </Link>
         </div>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Magnetic key={link.name} strength={0.2}>
-              <a 
+              <Link 
                 href={link.href} 
                 data-cursor="View"
-                className="text-text-sm font-medium text-foreground/60 hover:text-primary-100 transition-colors px-2 py-1"
+                className="text-text-sm font-medium text-foreground/60 hover:text-foreground transition-colors px-2 py-1"
               >
                 {link.name}
-              </a>
+              </Link>
             </Magnetic>
           ))}
         </div>
@@ -53,14 +56,14 @@ export function Nav() {
         <div className="flex items-center gap-4">
           <Magnetic>
             <button className="hidden sm:block px-5 py-2 bg-foreground text-background text-text-sm font-bold rounded-md transition-transform hover:scale-105 active:scale-95">
-              Get App
+              Download APK
             </button>
           </Magnetic>
 
           {/* Theme Toggle */}
           <button 
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="p-2 text-primary-100 hover:bg-primary-100/10 rounded-lg transition-colors"
+            className="p-2 text-foreground hover:bg-foreground/10 rounded-lg transition-colors"
           >
             {mounted && (theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />)}
           </button>
@@ -68,7 +71,7 @@ export function Nav() {
           {/* Mobile Menu Toggle */}
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-primary-100 hover:bg-primary-100/10 rounded-lg transition-colors"
+            className="md:hidden p-2 text-foreground hover:bg-foreground/10 rounded-lg transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -86,17 +89,17 @@ export function Nav() {
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className="text-display-sm font-black text-foreground border-b border-foreground/10 pb-4"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <button className="w-full py-6 bg-foreground text-background text-display-xs font-bold rounded-2xl mt-4">
-                Download the App
+                Download APK
               </button>
             </div>
           </motion.div>
@@ -121,7 +124,7 @@ export function CTA() {
 
           <button className="px-10 py-5 bg-foreground text-background font-black rounded-lg flex items-center gap-3 mx-auto shadow-elevation-3 transition-all hover:scale-105">
              <Download className="w-6 h-6" />
-             Download the App
+             Download APK
           </button>
         </div>
       </div>
