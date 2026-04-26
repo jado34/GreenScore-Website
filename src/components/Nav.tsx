@@ -1,11 +1,16 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { Download, Menu, X } from 'lucide-react';
+import { Download, Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from 'next-themes';
 import { Magnetic } from './Magnetic';
 
 export function Nav() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => setMounted(true), []);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 50], [0, -4]);
 
@@ -19,7 +24,7 @@ export function Nav() {
     <>
       <motion.nav
         style={{ y }}
-        className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-[100] px-6 md:px-8 py-4 flex items-center justify-between rounded-2xl border border-primary-100/5 bg-neutral-10/50 backdrop-blur-xl transition-all"
+        className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-[100] backdrop-blur-md bg-background/80 border border-foreground/10 rounded-2xl px-6 py-4 flex items-center justify-between transition-colors duration-500"
       >
         <div className="flex items-center gap-3">
            <img src="/logo.png" alt="GreenScore Logo" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-105" />
@@ -32,7 +37,7 @@ export function Nav() {
               <a 
                 href={link.href} 
                 data-cursor="View"
-                className="text-text-sm font-medium text-neutral-60 hover:text-primary-100 transition-colors px-2 py-1"
+                className="text-text-sm font-medium text-foreground/60 hover:text-primary-100 transition-colors px-2 py-1"
               >
                 {link.name}
               </a>
@@ -46,6 +51,14 @@ export function Nav() {
               Get App
             </button>
           </Magnetic>
+
+          {/* Theme Toggle */}
+          <button 
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className="p-2 text-primary-100 hover:bg-primary-100/10 rounded-lg transition-colors"
+          >
+            {mounted && (theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />)}
+          </button>
           
           {/* Mobile Menu Toggle */}
           <button 
@@ -60,11 +73,11 @@ export function Nav() {
       {/* Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-[90] md:hidden pt-32 px-6 bg-neutral-10/95 backdrop-blur-2xl"
+          <motion.div 
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            className="fixed inset-y-0 right-0 w-full sm:w-80 bg-background/95 backdrop-blur-xl p-10 z-[101] border-l border-foreground/10"
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (

@@ -35,10 +35,10 @@ export function LevelProgress() {
     <section id="levels" className="w-full py-40 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24">
-          <h2 className="text-display-md md:text-display-lg font-black text-primary-100 mb-6 uppercase tracking-tighter">
+          <h2 className="text-display-md md:text-display-lg font-black text-foreground mb-6 uppercase tracking-tighter">
             Your Growth, <br /> Visualized.
           </h2>
-          <p className="text-text-lg text-neutral-60 font-light max-w-2xl mx-auto">
+          <p className="text-text-lg text-foreground/60 font-light max-w-2xl mx-auto">
             As you log habits, your personal ecosystem evolves. From a tiny seedling to an eternal forest, track your progress through cinematic animations.
           </p>
         </div>
@@ -53,7 +53,7 @@ export function LevelProgress() {
               transition={{ delay: i * 0.1, duration: 0.5 }}
               className="relative group"
             >
-              <div className="aspect-square w-full rounded-[3rem] bg-neutral-20 border border-primary-100/10 flex items-center justify-center overflow-hidden mb-8 shadow-elevation-2 group-hover:shadow-elevation-4 transition-all duration-500">
+              <div className="aspect-square w-full rounded-[3rem] bg-foreground/5 border border-foreground/10 flex items-center justify-center overflow-hidden mb-8 shadow-elevation-2 group-hover:shadow-elevation-4 transition-all duration-500">
                 {/* Lottie Container */}
                 <div className="w-48 h-48">
                   {/* Since I don't have the exact JSONs, I'll use a placeholder circle animation or similar if URLs are broken */}
@@ -73,8 +73,8 @@ export function LevelProgress() {
                 <span className="text-[10px] font-bold text-primary-50 uppercase tracking-[0.3em] mb-3 block">
                   Level 0{i + 1}
                 </span>
-                <h3 className="text-display-xs font-black text-primary-100 mb-4">{level.title}</h3>
-                <p className="text-text-sm text-neutral-60 font-light mb-6 px-4">
+                <h3 className="text-display-xs font-black text-foreground mb-4">{level.title}</h3>
+                <p className="text-text-sm text-foreground/60 font-light mb-6 px-4">
                   {level.desc}
                 </p>
                 <div className="inline-block px-4 py-1 rounded-full bg-primary-100/10 border border-primary-100/20 text-primary-100 text-[10px] font-bold uppercase">

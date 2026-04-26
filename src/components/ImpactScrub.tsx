@@ -41,7 +41,7 @@ export function ImpactScrub() {
               <motion.div 
                 key={i} 
                 style={{ opacity: active, scale: active }}
-                className="w-2 h-2 rounded-full bg-primary-100" 
+                className="w-2 h-2 rounded-full bg-primary-50" 
               />
             );
           })}
@@ -60,10 +60,10 @@ export function ImpactScrub() {
                 className="absolute inset-0 flex flex-col justify-center items-center lg:items-start text-center lg:text-left pointer-events-none px-4"
               >
                 <span className="text-display-md md:text-display-lg mb-4 md:mb-6 drop-shadow-xl">{step.emoji}</span>
-                <h2 className="text-display-md md:text-display-xl lg:text-display-2xl font-black mb-4 md:mb-6 leading-tight text-primary-100 uppercase tracking-tighter">
+                <h2 className="text-display-md md:text-display-xl lg:text-display-2xl font-black mb-4 md:mb-6 leading-tight text-foreground uppercase tracking-tighter">
                   {step.title}
                 </h2>
-                <p className="text-text-lg md:text-text-xl text-neutral-60 leading-relaxed font-light max-w-md">
+                <p className="text-text-lg md:text-text-xl text-foreground/60 leading-relaxed font-light max-w-md">
                   {step.desc}
                 </p>
               </motion.div>
