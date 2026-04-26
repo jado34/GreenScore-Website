@@ -1,9 +1,26 @@
 import React from 'react';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
+import { LevelProgress } from '@/components/LevelProgress';
 import { ImpactScrub } from '@/components/ImpactScrub';
 import { CTA, Nav } from '@/components/Nav';
 import { SmoothScroll } from '@/components/SmoothScroll';
+import { ImageGallery } from '@/components/ImageGallery';
+import { motion } from 'framer-motion';
+
+function Reveal({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      className="w-full flex flex-col items-center"
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 export default function LandingPage() {
   return (
@@ -19,13 +36,28 @@ export default function LandingPage() {
         
         <div className="relative z-10 flex flex-col items-center">
           <Hero />
-          <ImpactScrub />
-          <Features />
-          <CTA />
+          
+          <Reveal>
+            <ImpactScrub />
+          </Reveal>
+
+          <Reveal>
+            <Features />
+          </Reveal>
+
+          <Reveal>
+            <LevelProgress />
+          </Reveal>
+
+          <ImageGallery />
+
+          <Reveal>
+            <CTA />
+          </Reveal>
         </div>
 
         <footer className="w-full py-12 px-8 flex flex-col md:flex-row items-center justify-between border-t border-white/5 opacity-50">
-           <div className="text-sm font-medium">© 2026 GreenScore Technologies.</div>
+           <div className="text-sm font-medium">© 2026 GreenScore. Developed by Team 10.</div>
            <div className="flex gap-8 mt-6 md:mt-0">
              <a href="#" className="text-xs hover:text-white transition-colors">Privacy</a>
              <a href="#" className="text-xs hover:text-white transition-colors">Terms</a>

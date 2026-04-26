@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
+import { Magnetic } from './Magnetic';
 
 export function Hero() {
   return (
@@ -24,35 +25,41 @@ export function Hero() {
           Next-Gen Sustainability is Here
         </motion.div>
         
-        <h1 className="text-display-sm sm:text-display-lg md:text-display-2xl font-black mb-8 leading-display-2xl tracking-tight">
+        <h1 className="text-display-sm sm:text-display-lg md:text-display-2xl font-black mb-8 leading-display-2xl tracking-tight text-balance">
           <span className="block text-primary-100">Log Your Life.</span>
           <span className="block bg-gradient-to-r from-primary-60 to-accent-60 bg-clip-text text-transparent italic">
             Save Your World.
           </span>
         </h1>
         
-        <p className="text-text-md sm:text-text-lg md:text-text-xl text-neutral-60 max-w-2xl mx-auto mb-10 md:mb-12 font-light leading-relaxed">
-          The award-winning tracker that turns environmental impact into a high-fidelity game. Build habits, grow forests, and change the planet.
+        <p className="text-text-md sm:text-text-lg md:text-text-xl text-neutral-60 max-w-2xl mx-auto mb-10 md:mb-12 font-light leading-relaxed text-pretty px-4 sm:px-0">
+          Master 20+ daily habits and watch your impact grow. From <strong>Seedling</strong> to <strong>Forest</strong>, track your journey with science-backed metrics and cinematic rewards.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full sm:w-auto group relative px-8 py-4 bg-primary-50 text-neutral-10 font-bold rounded-2xl flex items-center justify-center gap-3 overflow-hidden transition-all hover:bg-primary-60"
-          >
-            <Download className="w-5 h-5" />
-            Download for iOS
-            <div className="absolute inset-0 bg-primary-100/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
-          </motion.button>
+          <Magnetic>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              data-cursor="Download"
+              className="w-full sm:w-auto group relative px-8 py-4 bg-primary-50 text-neutral-10 font-bold rounded-2xl flex items-center justify-center gap-3 overflow-hidden transition-all hover:bg-primary-60"
+            >
+              <Download className="w-5 h-5" />
+              Download for iOS
+              <div className="absolute inset-0 bg-primary-100/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
+            </motion.button>
+          </Magnetic>
           
-          <motion.button
-            whileHover={{ x: 5 }}
-            className="flex items-center justify-center gap-2 text-primary-100 font-semibold group py-2"
-          >
-            Explore the Forest
-            <ArrowRight className="w-5 h-5 text-primary-50 transition-transform group-hover:translate-x-1" />
-          </motion.button>
+          <Magnetic>
+            <motion.button
+              whileHover={{ x: 5 }}
+              data-cursor="Explore"
+              className="flex items-center justify-center gap-2 text-primary-100 font-semibold group py-2 px-4"
+            >
+              Explore the Forest
+              <ArrowRight className="w-5 h-5 text-primary-50 transition-transform group-hover:translate-x-1" />
+            </motion.button>
+          </Magnetic>
         </div>
       </motion.div>
 
