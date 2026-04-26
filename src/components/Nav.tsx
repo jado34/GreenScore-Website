@@ -15,9 +15,10 @@ export function Nav() {
   const y = useTransform(scrollY, [0, 50], [0, -4]);
 
   const navLinks = [
-    { name: 'Features', href: '#features' },
-    { name: 'Methodology', href: '#methodology' },
-    { name: 'Gallery', href: '#gallery' },
+    { name: 'About', href: '/about' },
+    { name: 'Features', href: '/#features' },
+    { name: 'Methodology', href: '/#methodology' },
+    { name: 'Gallery', href: '/#gallery' },
   ];
 
   return (
