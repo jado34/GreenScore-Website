@@ -1,9 +1,16 @@
 'use client';
 import { motion } from 'framer-motion';
 
-const IMAGES = [
+type GalleryImage = {
+  title: string;
+  desc: string;
+  id?: string;
+  src?: string;
+};
+
+const IMAGES: GalleryImage[] = [
   { id: "1542273917363-3b1817f69a2d", title: "Ancient Forests", desc: "Protecting the lungs of our planet." },
-  { id: "1466611653911-95281773ad90", title: "Renewable Future", desc: "Harnessing wind and solar energy." },
+  { src: "/renewable-energy.jpg", title: "Renewable Future", desc: "Harnessing wind and solar energy." },
   { id: "1449824913935-59a10b8d2000", title: "Urban Oases", desc: "Green cities for a better tomorrow." },
   { id: "1439066615861-d1af74d74000", title: "Ocean Health", desc: "Restoring marine biodiversity." },
   { id: "1500382017468-9049fed747ef", title: "Sustainable Farming", desc: "Feeding the world responsibly." },
@@ -43,7 +50,7 @@ export function ImageGallery() {
               className="relative flex-shrink-0 w-[85vw] md:w-[500px] aspect-[4/5] rounded-[2.5rem] overflow-hidden group shadow-elevation-2 snap-center"
             >
               <img 
-                src={`https://images.unsplash.com/photo-${img.id}?auto=format&fit=crop&q=80&w=1200`} 
+                src={img.src || `https://images.unsplash.com/photo-${img.id}?auto=format&fit=crop&q=80&w=1200`} 
                 alt={img.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
               />
