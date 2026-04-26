@@ -54,7 +54,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-neutral-10 text-neutral-90 transition-colors duration-500">
+      <body className="min-h-full flex flex-col">
         <Providers>
           <Preloader />
           <CustomCursor />

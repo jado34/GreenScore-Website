@@ -1,7 +1,28 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Lottie from 'lottie-react';
 import { motion } from 'framer-motion';
+
+function LottieWrapper({ url }: { url: string }) {
+  const [animationData, setAnimationData] = useState<any>(null);
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setAnimationData(data))
+      .catch((err) => console.error("Error loading Lottie:", err));
+  }, [url]);
+
+  if (!animationData) return <div className="w-full h-full bg-primary-100/5 animate-pulse rounded-full" />;
+
+  return (
+    <Lottie 
+      animationData={animationData}
+      loop={true}
+      className="w-full h-full"
+    />
+  );
+}
 
 const LEVELS = [
   {
@@ -56,13 +77,7 @@ export function LevelProgress() {
               <div className="aspect-square w-full rounded-[3rem] bg-foreground/5 border border-foreground/10 flex items-center justify-center overflow-hidden mb-8 shadow-elevation-2 group-hover:shadow-elevation-4 transition-all duration-500">
                 {/* Lottie Container */}
                 <div className="w-48 h-48">
-                  {/* Since I don't have the exact JSONs, I'll use a placeholder circle animation or similar if URLs are broken */}
-                   <Lottie 
-                    animationData={null} // We would fetch or bundle JSON here
-                    path={level.lottieUrl}
-                    loop={true}
-                    className="w-full h-full"
-                  />
+                  <LottieWrapper url={level.lottieUrl} />
                 </div>
                 
                 {/* Decorative background glow */}
