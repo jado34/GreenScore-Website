@@ -4,6 +4,7 @@ import "./globals.css";
 import { CustomCursor } from "@/components/CustomCursor";
 import { Noise } from "@/components/Noise";
 import { Preloader } from "@/components/Preloader";
+import { Providers } from "@/components/Providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,11 +54,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">
-        <Preloader />
-        <CustomCursor />
-        <Noise />
-        {children}
+      <body className="min-h-full flex flex-col bg-neutral-10 text-neutral-90 transition-colors duration-500">
+        <Providers>
+          <Preloader />
+          <CustomCursor />
+          <Noise />
+          {children}
+        </Providers>
       </body>
     </html>
   );

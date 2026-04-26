@@ -3,11 +3,11 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 const IMAGES = [
-  { id: "NUMlWAQdHj8", title: "Ancient Forests", desc: "Protecting the lungs of our planet." },
-  { id: "YtELR3Q5Y4E", title: "Renewable Future", desc: "Harnessing wind and solar energy." },
-  { id: "yFVDKJ4R0fk", title: "Urban Oases", desc: "Green cities for a better tomorrow." },
-  { id: "mS_F9pM8J8A", title: "Ocean Health", desc: "Restoring marine biodiversity." },
-  { id: "ICl7A_9vV04", title: "Sustainable Farming", desc: "Feeding the world responsibly." },
+  { id: "1542273917363-3b1817f69a2d", title: "Ancient Forests", desc: "Protecting the lungs of our planet." },
+  { id: "1466611653911-95281773ad90", title: "Renewable Future", desc: "Harnessing wind and solar energy." },
+  { id: "1449824913935-59a10b8d2000", title: "Urban Oases", desc: "Green cities for a better tomorrow." },
+  { id: "1439066615861-d1af74d74000", title: "Ocean Health", desc: "Restoring marine biodiversity." },
+  { id: "1500382017468-9049fed747ef", title: "Sustainable Farming", desc: "Feeding the world responsibly." },
 ];
 
 export function ImageGallery() {
@@ -31,10 +31,10 @@ export function ImageGallery() {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h2 className="text-display-md md:text-display-lg font-black text-primary-100 mb-6 text-balance">
+            <h2 className="text-display-md md:text-display-lg font-black text-foreground mb-6 text-balance">
               A World Worth Saving.
             </h2>
-            <p className="text-text-lg text-neutral-60 font-light text-pretty">
+            <p className="text-text-lg text-foreground/60 font-light text-pretty">
               Every action you log on GreenScore helps protect these vital ecosystems. Scroll to explore the impact.
             </p>
           </motion.div>
