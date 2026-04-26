@@ -24,7 +24,7 @@ export function AboutHero() {
           Next-Gen Sustainability is Here
         </motion.div>
         
-        <h1 className="text-display-sm sm:text-display-lg md:text-display-2xl font-black mb-8 leading-tight tracking-tight text-balance">
+        <h1 className="text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] font-black mb-8 leading-[1.1] tracking-tight text-balance">
           <span className="block text-foreground">Log Your Life.</span>
           <span className="block bg-gradient-to-r from-primary-60 to-accent-60 bg-clip-text text-transparent italic">
             Save Your World.

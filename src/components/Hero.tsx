@@ -31,7 +31,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-display-lg sm:text-display-xl md:text-[5.5rem] leading-[1.05] tracking-tight font-black text-foreground mb-8 text-balance"
+          className="text-[3rem] sm:text-[4rem] md:text-[5.5rem] leading-[1.05] tracking-tight font-black text-foreground mb-8 text-balance"
         >
           Turn Daily Habits Into <br className="hidden md:block" />
           <span className="italic font-light text-primary-50">Global Impact.</span>
@@ -41,7 +41,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-text-lg sm:text-text-xl text-foreground/60 max-w-2xl font-light leading-relaxed mb-14"
+          className="text-lg sm:text-xl text-foreground/60 max-w-2xl font-light leading-relaxed mb-14"
         >
           GreenScore gamifies sustainability. Log your transport, food, and energy habits to earn points, build your virtual forest, and seamlessly track your real-world footprint.
         </motion.p>

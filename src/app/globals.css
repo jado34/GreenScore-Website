@@ -65,17 +65,17 @@
   /* Typography */
   --font-sans: var(--font-sans);
   
-  --font-size-display-2xl: var(--font-size-display-2xl);
-  --font-size-display-xl: var(--font-size-display-xl);
-  --font-size-display-lg: var(--font-size-display-lg);
-  --font-size-display-md: var(--font-size-display-md);
-  --font-size-display-sm: var(--font-size-display-sm);
+  --text-display-2xl: var(--font-size-display-2xl);
+  --text-display-xl: var(--font-size-display-xl);
+  --text-display-lg: var(--font-size-display-lg);
+  --text-display-md: var(--font-size-display-md);
+  --text-display-sm: var(--font-size-display-sm);
 
-  --font-size-text-xl: var(--font-size-text-xl);
-  --font-size-text-lg: var(--font-size-text-lg);
-  --font-size-text-md: var(--font-size-text-md);
-  --font-size-text-sm: var(--font-size-text-sm);
-  --font-size-text-xs: var(--font-size-text-xs);
+  --text-text-xl: var(--font-size-text-xl);
+  --text-text-lg: var(--font-size-text-lg);
+  --text-text-md: var(--font-size-text-md);
+  --text-text-sm: var(--font-size-text-sm);
+  --text-text-xs: var(--font-size-text-xs);
 
   /* Line Heights */
   --leading-display-2xl: var(--line-height-display-2xl);
