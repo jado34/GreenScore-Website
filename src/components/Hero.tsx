@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Download, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight, Leaf } from 'lucide-react';
 import { Magnetic } from './Magnetic';
 
 export function Hero() {
