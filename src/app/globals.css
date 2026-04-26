@@ -95,18 +95,31 @@
 
 @layer base {
   :root {
-    --background: var(--color-neutral-100);
-    --foreground: var(--color-neutral-10);
+    --background: #fdfdfc;
+    --foreground: #1a1a1a;
+    --card: #ffffff;
+    --card-foreground: #1a1a1a;
+    --muted: #f1f3f1;
+    --muted-foreground: #666666;
+    --border: #e5e7e5;
   }
 
   .dark {
-    --background: var(--color-neutral-10);
-    --foreground: var(--color-neutral-100);
+    --background: #0a0a0a;
+    --foreground: #fdfdfc;
+    --card: #141414;
+    --card-foreground: #fdfdfc;
+    --muted: #1a1a1a;
+    --muted-foreground: #a1a1a1;
+    --border: #262626;
   }
 
   body {
     background-color: var(--background);
     color: var(--foreground);
-    @apply antialiased font-sans transition-colors duration-500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-sans);
+    transition: background-color 0.7s ease-in-out, color 0.7s ease-in-out;
   }
 }

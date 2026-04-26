@@ -24,10 +24,14 @@ export function Nav() {
     <>
       <motion.nav
         style={{ y }}
-        className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-[100] backdrop-blur-md bg-background/80 border border-foreground/10 rounded-2xl px-6 py-4 flex items-center justify-between transition-colors duration-500"
+        className="fixed top-8 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-[100] backdrop-blur-md bg-background/80 border border-foreground/10 rounded-3xl px-8 py-5 flex items-center justify-between transition-colors duration-500 shadow-elevation-2"
       >
-        <div className="flex items-center gap-3">
-           <img src="/logo.png" alt="GreenScore Logo" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-105" />
+        <div className="flex items-center min-w-[140px]">
+           <img 
+              src="/logo.png" 
+              alt="GreenScore Logo" 
+              className="w-[140px] md:w-[180px] h-[48px] md:h-[56px] object-contain transition-transform hover:scale-105" 
+            />
         </div>
 
         {/* Desktop Links */}
@@ -47,7 +51,7 @@ export function Nav() {
 
         <div className="flex items-center gap-4">
           <Magnetic>
-            <button className="hidden sm:block px-5 py-2 bg-primary-100 text-neutral-10 text-text-sm font-bold rounded-md transition-transform hover:scale-105 active:scale-95">
+            <button className="hidden sm:block px-5 py-2 bg-foreground text-background text-text-sm font-bold rounded-md transition-transform hover:scale-105 active:scale-95">
               Get App
             </button>
           </Magnetic>
@@ -85,12 +89,12 @@ export function Nav() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-display-sm font-black text-primary-100 border-b border-primary-100/10 pb-4"
+                  className="text-display-sm font-black text-foreground border-b border-foreground/10 pb-4"
                 >
                   {link.name}
                 </a>
               ))}
-              <button className="w-full py-6 bg-primary-100 text-neutral-10 text-display-xs font-bold rounded-2xl mt-4">
+              <button className="w-full py-6 bg-foreground text-background text-display-xs font-bold rounded-2xl mt-4">
                 Download the App
               </button>
             </div>
@@ -105,16 +109,16 @@ export function CTA() {
   return (
     <section className="w-full py-40 px-6 relative overflow-hidden">
       <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-40/40 to-accent-40/20 backdrop-blur-3xl z-10" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-niKKUdRhcsw?q=80&w=2560&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-50/20 to-accent-50/10 backdrop-blur-3xl z-10" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2560&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-30" />
         
         <div className="relative z-20 px-12 py-24 text-center">
-          <h2 className="text-display-md md:text-display-xl font-black mb-8 leading-tight text-primary-100">Start Your Journey Today.</h2>
-          <p className="text-text-lg md:text-text-xl text-primary-100/70 max-w-2xl mx-auto mb-12 font-light">
+          <h2 className="text-display-md md:text-display-xl font-black mb-8 leading-tight text-foreground">Start Your Journey Today.</h2>
+          <p className="text-text-lg md:text-text-xl text-foreground/70 max-w-2xl mx-auto mb-12 font-light">
              Impact shouldn’t be complicated. Join the global movement and start earning rewards for saving your planet.
           </p>
 
-          <button className="px-10 py-5 bg-primary-100 text-primary-20 font-black rounded-lg flex items-center gap-3 mx-auto shadow-elevation-3 transition-all hover:bg-neutral-98 hover:scale-105">
+          <button className="px-10 py-5 bg-foreground text-background font-black rounded-lg flex items-center gap-3 mx-auto shadow-elevation-3 transition-all hover:scale-105">
              <Download className="w-6 h-6" />
              Download the App
           </button>

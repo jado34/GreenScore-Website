@@ -41,6 +41,12 @@ export const metadata: Metadata = {
     description: "The award-winning sustainability tracker. Master 20+ daily habits and watch your impact grow from Seedling to Forest.",
     images: ["/og-image.jpg"],
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+  metadataBase: new URL("https://greenscore.earth"),
 };
 
 
@@ -54,7 +60,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-neutral-10 text-neutral-90 transition-colors duration-500">
+      <body className="min-h-full flex flex-col">
         <Providers>
           <Preloader />
           <CustomCursor />

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
@@ -25,7 +26,7 @@ function Reveal({ children }: { children: React.ReactNode }) {
 export default function LandingPage() {
   return (
     <SmoothScroll>
-      <main className="relative min-h-screen bg-neutral-10 selection:bg-primary-50/30">
+      <main className="relative min-h-screen bg-background selection:bg-primary-50/30">
         {/* Cinematic Background */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-50/10 blur-[120px] rounded-full" />

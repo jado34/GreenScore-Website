@@ -27,7 +27,7 @@ export function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-text-lg md:text-text-xl text-foreground/60 font-light max-w-2xl mx-auto"
+            className="text-text-lg md:text-text-xl text-muted-foreground font-light max-w-2xl mx-auto"
           >
             GreenScore uses scientific data mapping from **EPA** and **UNEP** datasets to turn your daily actions into tangible climate progress.
           </motion.p>
@@ -55,13 +55,13 @@ export function Features() {
                 hidden: { opacity: 0, y: 20 },
                 show: { opacity: 1, y: 0 }
               }}
-              className="p-8 rounded-2xl border border-foreground/5 bg-foreground/5 backdrop-blur-md hover:border-primary-50/30 transition-all group"
+              className="p-8 rounded-2xl border border-border bg-card shadow-elevation-1 hover:border-primary/30 transition-all group"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary-50/10 flex items-center justify-center mb-8 group-hover:bg-primary-50/20 transition-colors">
-                <c.icon className="w-7 h-7 text-primary-50" />
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
+                <c.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-text-xl font-bold mb-4 text-foreground">{c.title}</h3>
-              <p className="text-foreground/60 font-light leading-relaxed text-text-sm">{c.desc}</p>
+              <p className="text-muted-foreground font-light leading-relaxed text-text-sm">{c.desc}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -70,21 +70,20 @@ export function Features() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-24 p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-r from-primary-50/10 to-accent-50/5 border border-primary-50/10 flex flex-col md:flex-row items-center justify-between gap-8"
+          className="mt-24 p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/10 flex flex-col md:flex-row items-center justify-between gap-8"
         >
           <div className="flex-1">
-            <div className="flex items-center gap-2 text-primary-50 font-bold mb-4">
+            <div className="flex items-center gap-2 text-primary font-bold mb-4">
               <ShieldCheck className="w-5 h-5" />
               <span>Scientific Methodology</span>
             </div>
             <h3 className="text-display-sm font-black text-foreground mb-4">Our Data Source</h3>
-            <p className="text-foreground/60 font-light max-w-xl">
+            <p className="text-muted-foreground font-light max-w-xl">
               Every action in GreenScore is calculated using emission factors and impact metrics sourced from the **U.S. Environmental Protection Agency (EPA)** and the **United Nations Environment Programme (UNEP)**.
             </p>
           </div>
           <div className="flex gap-4">
-            <div className="px-6 py-3 rounded-full bg-foreground/5 border border-foreground/10 text-foreground text-text-xs font-bold uppercase tracking-wider">EPA Verified</div>
-            <div className="px-6 py-3 rounded-full bg-foreground/5 border border-foreground/10 text-foreground text-text-xs font-bold uppercase tracking-wider">UNEP Standard</div>
+            <div className="px-6 py-3 rounded-full bg-muted border border-border text-foreground text-text-xs font-bold uppercase tracking-wider">UNEP Standard</div>
           </div>
         </motion.div>
       </div>
