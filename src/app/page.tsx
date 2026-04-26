@@ -1,10 +1,26 @@
 import React from 'react';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
+import { LevelProgress } from '@/components/LevelProgress';
 import { ImpactScrub } from '@/components/ImpactScrub';
 import { CTA, Nav } from '@/components/Nav';
 import { SmoothScroll } from '@/components/SmoothScroll';
 import { ImageGallery } from '@/components/ImageGallery';
+import { motion } from 'framer-motion';
+
+function Reveal({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      className="w-full flex flex-col items-center"
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 export default function LandingPage() {
   return (
@@ -20,10 +36,24 @@ export default function LandingPage() {
         
         <div className="relative z-10 flex flex-col items-center">
           <Hero />
-          <ImpactScrub />
-          <Features />
+          
+          <Reveal>
+            <ImpactScrub />
+          </Reveal>
+
+          <Reveal>
+            <Features />
+          </Reveal>
+
+          <Reveal>
+            <LevelProgress />
+          </Reveal>
+
           <ImageGallery />
-          <CTA />
+
+          <Reveal>
+            <CTA />
+          </Reveal>
         </div>
 
         <footer className="w-full py-12 px-8 flex flex-col md:flex-row items-center justify-between border-t border-white/5 opacity-50">

@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
+import { Magnetic } from './Magnetic';
 
 export function Hero() {
   return (
@@ -36,23 +37,29 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full sm:w-auto group relative px-8 py-4 bg-primary-50 text-neutral-10 font-bold rounded-2xl flex items-center justify-center gap-3 overflow-hidden transition-all hover:bg-primary-60"
-          >
-            <Download className="w-5 h-5" />
-            Download for iOS
-            <div className="absolute inset-0 bg-primary-100/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
-          </motion.button>
+          <Magnetic>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              data-cursor="Download"
+              className="w-full sm:w-auto group relative px-8 py-4 bg-primary-50 text-neutral-10 font-bold rounded-2xl flex items-center justify-center gap-3 overflow-hidden transition-all hover:bg-primary-60"
+            >
+              <Download className="w-5 h-5" />
+              Download for iOS
+              <div className="absolute inset-0 bg-primary-100/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
+            </motion.button>
+          </Magnetic>
           
-          <motion.button
-            whileHover={{ x: 5 }}
-            className="flex items-center justify-center gap-2 text-primary-100 font-semibold group py-2"
-          >
-            Explore the Forest
-            <ArrowRight className="w-5 h-5 text-primary-50 transition-transform group-hover:translate-x-1" />
-          </motion.button>
+          <Magnetic>
+            <motion.button
+              whileHover={{ x: 5 }}
+              data-cursor="Explore"
+              className="flex items-center justify-center gap-2 text-primary-100 font-semibold group py-2 px-4"
+            >
+              Explore the Forest
+              <ArrowRight className="w-5 h-5 text-primary-50 transition-transform group-hover:translate-x-1" />
+            </motion.button>
+          </Magnetic>
         </div>
       </motion.div>
 

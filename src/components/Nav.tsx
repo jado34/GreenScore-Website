@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Download, Menu, X } from 'lucide-react';
+import { Magnetic } from './Magnetic';
 
 export function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,20 +28,24 @@ export function Nav() {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              className="text-text-sm font-medium text-neutral-60 hover:text-primary-100 transition-colors"
-            >
-              {link.name}
-            </a>
+            <Magnetic key={link.name} strength={0.2}>
+              <a 
+                href={link.href} 
+                data-cursor="View"
+                className="text-text-sm font-medium text-neutral-60 hover:text-primary-100 transition-colors px-2 py-1"
+              >
+                {link.name}
+              </a>
+            </Magnetic>
           ))}
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="hidden sm:block px-5 py-2 bg-primary-100 text-neutral-10 text-text-sm font-bold rounded-md transition-transform hover:scale-105 active:scale-95">
-            Get App
-          </button>
+          <Magnetic>
+            <button className="hidden sm:block px-5 py-2 bg-primary-100 text-neutral-10 text-text-sm font-bold rounded-md transition-transform hover:scale-105 active:scale-95">
+              Get App
+            </button>
+          </Magnetic>
           
           {/* Mobile Menu Toggle */}
           <button 
