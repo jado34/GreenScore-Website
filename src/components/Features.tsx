@@ -29,7 +29,7 @@ export function Features() {
             transition={{ delay: 0.1 }}
             className="text-text-lg md:text-text-xl text-muted-foreground font-light max-w-2xl mx-auto"
           >
-            GreenScore uses scientific data mapping from **EPA** and **UNEP** datasets to turn your daily actions into tangible climate progress.
+            GreenScore uses scientific data mapping from <strong>EPA</strong> and <strong>UNEP</strong> datasets to turn your daily actions into tangible climate progress.
           </motion.p>
         </div>
 
@@ -79,7 +79,7 @@ export function Features() {
             </div>
             <h3 className="text-display-sm font-black text-foreground mb-4">Our Data Source</h3>
             <p className="text-muted-foreground font-light max-w-xl">
-              Every action in GreenScore is calculated using emission factors and impact metrics sourced from the **U.S. Environmental Protection Agency (EPA)** and the **United Nations Environment Programme (UNEP)**.
+              Every action in GreenScore is calculated using emission factors and impact metrics sourced from the <strong>U.S. Environmental Protection Agency (EPA)</strong> and the <strong>United Nations Environment Programme (UNEP)</strong>.
             </p>
           </div>
           <div className="flex gap-4">
