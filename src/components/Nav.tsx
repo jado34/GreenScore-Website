@@ -55,9 +55,14 @@ export function Nav() {
 
         <div className="flex items-center gap-4">
           <Magnetic>
-            <button className="hidden sm:block px-5 py-2 bg-foreground text-background text-text-sm font-bold rounded-md transition-transform hover:scale-105 active:scale-95">
+            <a 
+              href="https://drive.google.com/file/d/1PbBNX5dYJXM_1qYEQA23ngJe71GMdlCL/view?usp=drive_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden sm:block px-5 py-2 bg-foreground text-background text-text-sm font-bold rounded-md transition-transform hover:scale-105 active:scale-95"
+            >
               Download APK
-            </button>
+            </a>
           </Magnetic>
 
           {/* Theme Toggle */}
@@ -98,9 +103,14 @@ export function Nav() {
                   {link.name}
                 </Link>
               ))}
-              <button className="w-full py-6 bg-foreground text-background text-display-xs font-bold rounded-2xl mt-4">
+              <a 
+                href="https://drive.google.com/file/d/1PbBNX5dYJXM_1qYEQA23ngJe71GMdlCL/view?usp=drive_link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-center w-full py-6 bg-foreground text-background text-display-xs font-bold rounded-2xl mt-4"
+              >
                 Download APK
-              </button>
+              </a>
             </div>
           </motion.div>
         )}
@@ -122,10 +132,15 @@ export function CTA() {
             Impact shouldn’t be complicated. Join the global movement and start earning rewards for saving your planet.
           </p>
 
-          <button className="px-10 py-5 bg-foreground text-background font-black rounded-lg flex items-center gap-3 mx-auto shadow-elevation-3 transition-all hover:scale-105">
+          <a 
+            href="https://drive.google.com/file/d/1PbBNX5dYJXM_1qYEQA23ngJe71GMdlCL/view?usp=drive_link" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-10 py-5 bg-foreground text-background font-black rounded-lg flex items-center gap-3 mx-auto w-fit shadow-elevation-3 transition-all hover:scale-105"
+          >
             <Download className="w-6 h-6" />
             Download APK
-          </button>
+          </a>
         </div>
       </div>
     </section>
