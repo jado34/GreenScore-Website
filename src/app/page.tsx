@@ -2,11 +2,8 @@
 import React from 'react';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
-import { LevelProgress } from '@/components/LevelProgress';
-import { ImpactScrub } from '@/components/ImpactScrub';
 import { CTA, Nav } from '@/components/Nav';
 import { SmoothScroll } from '@/components/SmoothScroll';
-import { ImageGallery } from '@/components/ImageGallery';
 import { motion } from 'framer-motion';
 
 function Reveal({ children }: { children: React.ReactNode }) {
@@ -35,29 +32,19 @@ export default function LandingPage() {
 
         <Nav />
         
-        <div className="relative z-10 flex flex-col items-center">
+        <div className="relative z-10 flex flex-col items-center w-full">
           <Hero />
           
           <Reveal>
-            <ImpactScrub />
-          </Reveal>
-
-          <Reveal>
             <Features />
           </Reveal>
-
-          <Reveal>
-            <LevelProgress />
-          </Reveal>
-
-          <ImageGallery />
 
           <Reveal>
             <CTA />
           </Reveal>
         </div>
 
-        <footer className="w-full py-12 px-8 flex flex-col md:flex-row items-center justify-between border-t border-white/5 opacity-50">
+        <footer className="w-full py-12 px-8 flex flex-col md:flex-row items-center justify-between border-t border-foreground/5 opacity-50 bg-background text-foreground">
            <div className="text-sm font-medium">© 2026 GreenScore. Developed by Team 10.</div>
            <div className="flex gap-8 mt-6 md:mt-0">
              <a href="#" className="text-xs hover:text-white transition-colors">Privacy</a>
