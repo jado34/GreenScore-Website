@@ -33,10 +33,10 @@ export function Features() {
             Built to inspire. <span className="text-white/50">Made to impact.</span>
           </motion.h2>
 
-          <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-12 items-center">
+          <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-[1fr_1.5fr_1fr] gap-8 md:gap-6 items-center">
             
-            {/* Left Column - Pointers 1, 2, 3 */}
-            <div className="flex flex-col gap-10 md:gap-14 order-2 md:order-1">
+            {/* Left Column - Pointers 1, 2 */}
+            <div className="flex flex-col gap-12 md:gap-20 order-2 md:order-1">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -46,7 +46,7 @@ export function Features() {
               >
                 <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">01</div>
                 <h3 className="text-lg md:text-xl font-bold mb-1">Live Metrics</h3>
-                <p className="text-white/60 text-sm md:text-base max-w-[220px]">Real-time tracking of your daily offset.</p>
+                <p className="text-white/60 text-sm md:text-base max-w-[220px]">Real-time tracking of your daily carbon offset.</p>
               </motion.div>
 
               <motion.div 
@@ -58,23 +58,11 @@ export function Features() {
               >
                 <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">02</div>
                 <h3 className="text-lg md:text-xl font-bold mb-1">Deep Insights</h3>
-                <p className="text-white/60 text-sm md:text-base max-w-[220px]">Analyze your habits across all categories.</p>
-              </motion.div>
-
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 }}
-                viewport={{ once: true }}
-                className="text-left"
-              >
-                <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">03</div>
-                <h3 className="text-lg md:text-xl font-bold mb-1">Virtual Forest</h3>
-                <p className="text-white/60 text-sm md:text-base max-w-[220px]">Watch your real-world impact grow digitally.</p>
+                <p className="text-white/60 text-sm md:text-base max-w-[220px]">Analyze your habits across all 5 categories.</p>
               </motion.div>
             </div>
 
-            {/* Center Column - Mockup Image */}
+            {/* Center Column - Mockup Image (Bigger) */}
             <motion.div 
               style={{ scale: centerImageScale, rotate: centerImageRotate }}
               initial={{ opacity: 0 }}
@@ -86,12 +74,24 @@ export function Features() {
               <img 
                 src="/dark-center-mockup.png" 
                 alt="GreenScore Core" 
-                className="w-[250px] md:w-[320px] lg:w-[380px] object-contain drop-shadow-2xl"
+                className="w-[300px] md:w-[420px] lg:w-[500px] object-contain drop-shadow-2xl"
               />
             </motion.div>
 
-            {/* Right Column - Pointers 4, 5 */}
-            <div className="flex flex-col gap-10 md:gap-14 order-3">
+            {/* Right Column - Pointers 3, 4 */}
+            <div className="flex flex-col gap-12 md:gap-20 order-3">
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.6 }}
+                viewport={{ once: true }}
+                className="text-left md:text-right"
+              >
+                <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">03</div>
+                <h3 className="text-lg md:text-xl font-bold mb-1">EPA Verified</h3>
+                <p className="text-white/60 text-sm md:text-base max-w-[220px] md:ml-auto">Backed by scientific data standards.</p>
+              </motion.div>
+
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -100,18 +100,6 @@ export function Features() {
                 className="text-left md:text-right"
               >
                 <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">04</div>
-                <h3 className="text-lg md:text-xl font-bold mb-1">EPA Verified</h3>
-                <p className="text-white/60 text-sm md:text-base max-w-[220px] md:ml-auto">Backed by scientific data standards.</p>
-              </motion.div>
-
-              <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8 }}
-                viewport={{ once: true }}
-                className="text-left md:text-right"
-              >
-                <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">05</div>
                 <h3 className="text-lg md:text-xl font-bold mb-1">Gamified Rewards</h3>
                 <p className="text-white/60 text-sm md:text-base max-w-[220px] md:ml-auto">Earn badges and level up your journey.</p>
               </motion.div>
