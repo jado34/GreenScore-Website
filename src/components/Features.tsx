@@ -1,7 +1,7 @@
 'use client';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Activity } from 'lucide-react';
+import { Activity, Zap, Trash2, Car, Leaf, Droplet } from 'lucide-react';
 
 export function Features() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -52,43 +52,69 @@ export function Features() {
 
             {/* Pointers */}
             <div className="absolute inset-0 pointer-events-none">
-              {/* Pointer 1 */}
+              {/* Pointer 1 - Top Left */}
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
-                className="absolute top-[20%] left-[5%] md:left-[10%] text-left"
+                className="absolute top-[10%] left-[2%] md:left-[5%] text-left"
               >
                 <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">01</div>
                 <h3 className="text-lg md:text-xl font-bold mb-1">Live Metrics</h3>
-                <p className="text-white/60 text-sm md:text-base max-w-[200px]">Real-time tracking of your daily carbon offset.</p>
+                <p className="text-white/60 text-sm md:text-base max-w-[180px]">Real-time tracking of your daily offset.</p>
               </motion.div>
 
-              {/* Pointer 2 */}
+              {/* Pointer 2 - Middle Left */}
               <motion.div 
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 }}
+                viewport={{ once: true }}
+                className="absolute top-[45%] left-[2%] md:left-[5%] text-left"
+              >
+                <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">02</div>
+                <h3 className="text-lg md:text-xl font-bold mb-1">Deep Insights</h3>
+                <p className="text-white/60 text-sm md:text-base max-w-[180px]">Analyze your habits across all categories.</p>
+              </motion.div>
+
+              {/* Pointer 3 - Bottom Left */}
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
                 viewport={{ once: true }}
-                className="absolute top-[40%] right-[5%] md:right-[10%] text-right"
-              >
-                <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">02</div>
-                <h3 className="text-lg md:text-xl font-bold mb-1">EPA Verified</h3>
-                <p className="text-white/60 text-sm md:text-base max-w-[200px] ml-auto">Calculations backed by scientific data standards.</p>
-              </motion.div>
-
-              {/* Pointer 3 */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                viewport={{ once: true }}
-                className="absolute bottom-[10%] left-[5%] md:left-[10%] text-left"
+                className="absolute bottom-[10%] left-[2%] md:left-[5%] text-left"
               >
                 <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">03</div>
                 <h3 className="text-lg md:text-xl font-bold mb-1">Virtual Forest</h3>
-                <p className="text-white/60 text-sm md:text-base max-w-[200px]">Watch your real-world impact grow digitally.</p>
+                <p className="text-white/60 text-sm md:text-base max-w-[180px]">Watch your real-world impact grow digitally.</p>
+              </motion.div>
+
+              {/* Pointer 4 - Top Right */}
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.7 }}
+                viewport={{ once: true }}
+                className="absolute top-[25%] right-[2%] md:right-[5%] text-right"
+              >
+                <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">04</div>
+                <h3 className="text-lg md:text-xl font-bold mb-1">EPA Verified</h3>
+                <p className="text-white/60 text-sm md:text-base max-w-[180px] ml-auto">Backed by scientific data standards.</p>
+              </motion.div>
+
+              {/* Pointer 5 - Bottom Right */}
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.8 }}
+                viewport={{ once: true }}
+                className="absolute bottom-[25%] right-[2%] md:right-[5%] text-right"
+              >
+                <div className="text-primary-50 font-light text-2xl md:text-3xl italic mb-2">05</div>
+                <h3 className="text-lg md:text-xl font-bold mb-1">Gamified Rewards</h3>
+                <p className="text-white/60 text-sm md:text-base max-w-[180px] ml-auto">Earn badges and level up your journey.</p>
               </motion.div>
             </div>
           </div>
@@ -125,15 +151,25 @@ export function Features() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary-50/5 to-transparent z-0" />
               <div className="relative z-10 p-8 h-full flex flex-col">
-                <p className="text-foreground/50 text-sm font-bold mb-2">Transport</p>
-                <h3 className="text-2xl md:text-3xl font-medium tracking-tight text-foreground max-w-[250px]">
-                  A journey where every step counts.
+                <p className="text-foreground/50 text-sm font-bold mb-2">5 Core Categories</p>
+                <h3 className="text-2xl md:text-3xl font-medium tracking-tight text-foreground max-w-[280px]">
+                  Your entire lifestyle, quantified.
                 </h3>
-                <p className="text-foreground/60 text-sm mt-4 max-w-[250px]">
-                  Log public transit, biking, and walking to see your footprint shrink.
+                <p className="text-foreground/60 text-sm mt-4 max-w-[280px] mb-6">
+                  Track and reduce your footprint across Energy, Waste, Transport, Food, and Water.
                 </p>
-                <div className="absolute bottom-[-10%] right-[-5%] w-[60%] transition-transform duration-700 group-hover:scale-105">
-                  <img src="https://source.unsplash.com/W7tLS5vmmCM/1000x800" alt="Transport" className="rounded-tl-[2rem] shadow-2xl" />
+                
+                <div className="flex items-center gap-3 mt-auto relative z-20">
+                  <div className="p-2 rounded-full bg-background/50 backdrop-blur-md border border-foreground/10 shadow-sm"><Zap className="w-4 h-4 text-foreground/70" /></div>
+                  <div className="p-2 rounded-full bg-background/50 backdrop-blur-md border border-foreground/10 shadow-sm"><Trash2 className="w-4 h-4 text-foreground/70" /></div>
+                  <div className="p-2 rounded-full bg-background/50 backdrop-blur-md border border-foreground/10 shadow-sm"><Car className="w-4 h-4 text-foreground/70" /></div>
+                  <div className="p-2 rounded-full bg-background/50 backdrop-blur-md border border-foreground/10 shadow-sm"><Leaf className="w-4 h-4 text-foreground/70" /></div>
+                  <div className="p-2 rounded-full bg-background/50 backdrop-blur-md border border-foreground/10 shadow-sm"><Droplet className="w-4 h-4 text-foreground/70" /></div>
+                </div>
+
+                <div className="absolute bottom-[-10%] right-[-5%] w-[55%] transition-transform duration-700 group-hover:scale-105 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-card to-transparent z-10" />
+                  <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1000&auto=format&fit=crop" alt="Infrastructure" className="rounded-tl-[2rem] shadow-2xl opacity-90" />
                 </div>
               </div>
             </motion.div>
@@ -176,7 +212,7 @@ export function Features() {
                     Tap. Log. Done.
                   </h3>
                 </div>
-                <div className="absolute bottom-[-15%] right-[-15%] w-[80%] transition-transform duration-700 group-hover:-translate-y-4 group-hover:-translate-x-4">
+                <div className="absolute bottom-[-20%] right-[-10%] w-[100%] md:w-[120%] transition-transform duration-700 group-hover:-translate-y-4 group-hover:-translate-x-4">
                    <img src="/log-action-mockup.png" alt="Log Action UI" className="object-contain drop-shadow-2xl rounded-xl" />
                 </div>
               </div>
@@ -201,7 +237,7 @@ export function Features() {
                   </p>
                 </div>
                 <div className="flex-1 h-full w-full relative min-h-[150px]">
-                  <img src="https://source.unsplash.com/vzVGHfxZIZ8/1000x800" alt="Forest" className="absolute inset-0 w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-105" />
+                  <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000&auto=format&fit=crop" alt="Forest" className="absolute inset-0 w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-105" />
                 </div>
               </div>
             </motion.div>

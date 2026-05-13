@@ -4,6 +4,8 @@ import { Nav, CTA } from '@/components/Nav';
 import { SmoothScroll } from '@/components/SmoothScroll';
 import { AboutHero } from '@/components/AboutHero';
 import { AboutMission } from '@/components/AboutMission';
+import { AboutScience } from '@/components/AboutScience';
+import { AboutVision } from '@/components/AboutVision';
 import { motion } from 'framer-motion';
 
 function Reveal({ children }: { children: React.ReactNode }) {
@@ -33,18 +35,23 @@ export default function AboutPage() {
             <AboutMission />
           </Reveal>
 
+          <AboutScience />
+
+          <Reveal>
+            <AboutVision />
+          </Reveal>
 
           <Reveal>
             <CTA />
           </Reveal>
         </div>
 
-        <footer className="w-full py-12 px-8 flex flex-col md:flex-row items-center justify-between border-t border-white/5 opacity-50 relative z-10 bg-background">
+        <footer className="w-full py-12 px-8 flex flex-col md:flex-row items-center justify-between border-t border-foreground/5 opacity-50 relative z-10 bg-background text-foreground">
            <div className="text-sm font-medium">© 2026 GreenScore. Developed by Team 10.</div>
            <div className="flex gap-8 mt-6 md:mt-0">
-             <a href="#" className="text-xs hover:text-white transition-colors">Privacy</a>
-             <a href="#" className="text-xs hover:text-white transition-colors">Terms</a>
-             <a href="#" className="text-xs hover:text-white transition-colors">Press</a>
+             <a href="#" className="text-xs hover:text-foreground transition-colors">Privacy</a>
+             <a href="#" className="text-xs hover:text-foreground transition-colors">Terms</a>
+             <a href="#" className="text-xs hover:text-foreground transition-colors">Press</a>
            </div>
         </footer>
       </main>

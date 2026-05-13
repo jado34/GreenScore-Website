@@ -64,13 +64,48 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-4xl relative rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-foreground/5 aspect-[4/3] md:aspect-video flex items-center justify-center border border-foreground/10"
+          className="w-full max-w-4xl relative rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-foreground/5 aspect-[4/3] md:aspect-video flex items-center justify-center border border-foreground/10 group"
         >
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none" />
+          
+          {/* Floating Text - Top Left */}
+          <div className="absolute top-8 left-8 md:top-12 md:left-12 text-left z-20 pointer-events-none">
+            <motion.p 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.2, duration: 0.8 }}
+              className="text-foreground/40 text-xs md:text-sm uppercase tracking-widest font-bold mb-2"
+            >
+              The Interface
+            </motion.p>
+            <motion.h3 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.3, duration: 0.8 }}
+              className="text-foreground/80 text-xl md:text-2xl font-medium max-w-[200px] leading-tight"
+            >
+              A digital ecosystem, engineered to grow.
+            </motion.h3>
+          </div>
+
+          {/* Floating Badge - Bottom Right */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 0.8 }}
+            className="absolute bottom-8 right-8 md:bottom-12 md:right-12 z-20 flex items-center gap-3 bg-background/80 backdrop-blur-xl border border-foreground/10 px-5 py-3 rounded-2xl shadow-xl hover:scale-105 transition-transform cursor-default"
+          >
+             <div className="w-3 h-3 rounded-full bg-primary-50 animate-pulse" />
+             <div className="text-left">
+               <p className="text-foreground font-bold text-sm">EPA Verified</p>
+               <p className="text-foreground/50 text-xs">Live Data Tracking</p>
+             </div>
+          </motion.div>
+
           <img 
             src="/hero-app-mockup.png" 
             alt="GreenScore App Mockup" 
-            className="w-full h-full object-contain object-center scale-100 hover:scale-[1.02] transition-transform duration-[2s]"
+            className="w-full h-full object-contain object-center scale-100 group-hover:scale-[1.02] transition-transform duration-[2s]"
           />
         </motion.div>
       </div>

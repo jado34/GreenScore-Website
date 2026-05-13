@@ -41,7 +41,7 @@ export function Nav() {
 
         {/* Center: Links Pill */}
         <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 pointer-events-auto">
-          <div className="flex items-center gap-1 p-1.5 rounded-full bg-foreground/5 backdrop-blur-xl border border-foreground/10 shadow-sm">
+          <div className="flex items-center gap-1 p-1.5 rounded-full bg-background/80 backdrop-blur-2xl border border-border shadow-md">
             {navLinks.map((link) => (
               <Magnetic key={link.name} strength={0.1}>
                 <Link
@@ -59,7 +59,7 @@ export function Nav() {
         <div className="flex items-center justify-end gap-3 pointer-events-auto shrink-0 w-[150px] md:w-[200px]">
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="p-2.5 text-foreground/70 hover:text-foreground bg-foreground/5 hover:bg-foreground/10 backdrop-blur-md rounded-full transition-all border border-foreground/5"
+            className="p-2.5 text-foreground/70 hover:text-foreground bg-background/80 hover:bg-background backdrop-blur-2xl rounded-full transition-all border border-border shadow-sm"
             aria-label="Toggle Theme"
           >
             {mounted && (theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />)}
@@ -79,7 +79,7 @@ export function Nav() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2.5 text-foreground/70 hover:text-foreground bg-foreground/5 backdrop-blur-md rounded-full transition-all border border-foreground/5"
+            className="md:hidden p-2.5 text-foreground/70 hover:text-foreground bg-background/80 backdrop-blur-2xl rounded-full transition-all border border-border shadow-sm"
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
