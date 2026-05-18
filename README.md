@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌍 About
 
-## Getting Started
+GreenScore is a premium gamified sustainability platform developed by Team 10. It empowers users to track their environmental impact across five core categories: Energy, Waste, Transport, Food, and Water — using EPA-verified data standards and UNEP benchmarks.
 
-First, run the development server:
+What sets GreenScore apart is its gamified virtual ecosystem**: every action you log grows a digital forest, transforming abstract sustainability metrics into a tangible, living representation of your impact. Streaks, badges, and level progression keep users engaged through behavioral psychology, not guilt.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+"A digital ecosystem, engineered to grow."
+🌱 GreenScore
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Log Your Life. Save Your World.
+Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · Framer Motion · Lenis · Lucide Icons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+Key Features
 
-To learn more about Next.js, take a look at the following resources:
+- 📊 Real-time carbon offset tracking
+- 🌳 Virtual ecosystem that grows with your habits
+- 🎮 Streaks, badges, and level progression
+- ⚡ One-tap action logging
+- 🌓 Dark and light mode support
+ License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private and proprietary © 2026 GreenScore. All rights reserved.
