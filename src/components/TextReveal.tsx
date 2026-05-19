@@ -53,7 +53,7 @@ export function TextReveal({
           rotateX: 0,
           filter: 'blur(0px)',
           transition: {
-            type: 'spring',
+            type: 'spring' as const,
             damping: 20,
             stiffness: 100,
           },
@@ -71,7 +71,7 @@ export function TextReveal({
           filter: 'blur(0px)',
           transition: {
             duration: 0.6,
-            ease: [0.16, 1, 0.3, 1],
+            ease: [0.16, 1, 0.3, 1] as const,
           },
         },
       };
