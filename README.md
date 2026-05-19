@@ -1,17 +1,19 @@
-# 🌱 GreenLume
+🌍 About
 
-**Log Your Life. Save Your World.**
+GreenScore is a premium gamified sustainability platform developed by Team 10. It empowers users to track their environmental impact across five core categories: Energy, Waste, Transport, Food, and Water — using EPA-verified data standards and UNEP benchmarks.
 
-GreenLume is a gamified sustainability tracker that helps users measure and reduce their environmental footprint across five categories — Energy, Waste, Transport, Food, and Water. Every action logged grows a virtual forest, turning daily habits into visible impact.
+What sets GreenScore apart is its gamified virtual ecosystem**: every action you log grows a digital forest, transforming abstract sustainability metrics into a tangible, living representation of your impact. Streaks, badges, and level progression keep users engaged through behavioral psychology, not guilt.
 
-EPA & UNEP verified data standards
+"A digital ecosystem, engineered to grow."
+🌱 GreenScore
 
-## Tech Stack
+Log Your Life. Save Your World.
+Tech Stack
 
 Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · Framer Motion · Lenis · Lucide Icons
 
 
-## Key Features
+Key Features
 
 - 📊 Real-time carbon offset tracking
 - 🌳 Virtual ecosystem that grows with your habits
