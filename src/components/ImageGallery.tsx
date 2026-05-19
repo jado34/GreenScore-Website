@@ -33,7 +33,7 @@ export function ImageGallery() {
               A World Worth Saving.
             </h2>
             <p className="text-text-lg text-foreground/60 font-light text-pretty">
-              Every action you log on GreenScore helps protect these vital ecosystems. Swipe to explore the impact.
+              Every action you log on GreenLume helps protect these vital ecosystems. Swipe to explore the impact.
             </p>
           </motion.div>
         </div>

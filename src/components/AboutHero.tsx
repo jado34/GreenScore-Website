@@ -1,6 +1,7 @@
 'use client';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 
 export function AboutHero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -55,7 +56,7 @@ export function AboutHero() {
           transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="text-lg sm:text-xl text-foreground/60 max-w-2xl font-normal leading-relaxed mb-16 text-balance"
         >
-          We are Team 10, a passionate group from the Dev and Design Bootcamp, united by a single vision: to gamify and reward real-world environmental impact.
+          We are GreenLume — a team of engineers and designers on a mission to make sustainability actionable, measurable, and rewarding for everyone.
         </motion.p>
 
         {/* Image */}
@@ -67,10 +68,13 @@ export function AboutHero() {
           className="w-full max-w-4xl relative rounded-[2rem] md:rounded-[3rem] overflow-hidden aspect-[16/9] border border-foreground/10"
         >
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none" />
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=2000&auto=format&fit=crop"
             alt="Nature and Sustainability"
+            fill
+            sizes="(max-width: 1200px) 100vw, 1200px"
             className="w-full h-full object-cover"
+            priority
           />
           
           {/* Floating Stats */}
@@ -82,8 +86,8 @@ export function AboutHero() {
           >
             <div className="w-3 h-3 rounded-full bg-primary-50 animate-pulse" />
             <div className="text-left">
-              <p className="text-foreground font-bold text-sm">Team 10</p>
-              <p className="text-foreground/50 text-xs">Dev & Design Bootcamp</p>
+              <p className="text-foreground font-bold text-sm">GreenLume</p>
+              <p className="text-foreground/50 text-xs">Green Energy Tech</p>
             </div>
           </motion.div>
         </motion.div>

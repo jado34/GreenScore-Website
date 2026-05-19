@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Zap, Brain, TreePine } from 'lucide-react';
 
-const phrase = "We believe that the most powerful force for environmental change isn't a single monumental event, but the collective impact of millions of everyday actions. GreenScore is built to align individual habits with global sustainability goals.";
+const phrase = "We believe that the most powerful force for environmental change isn't a single monumental event, but the collective impact of millions of everyday actions. GreenLume is built to align individual habits with global sustainability goals.";
 
 const philosophyCards = [
   {

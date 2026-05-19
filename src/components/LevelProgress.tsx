@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const LEVELS = [
   {
@@ -59,9 +60,11 @@ export function LevelProgress() {
               className="relative group"
             >
               <div className="aspect-[4/5] w-full rounded-[2.5rem] bg-foreground/5 border border-foreground/10 flex items-center justify-center overflow-hidden mb-8 shadow-elevation-1 group-hover:shadow-elevation-3 transition-all duration-500 relative">
-                <img 
+                <Image 
                   src={level.image} 
-                  alt={level.title} 
+                  alt={level.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 20vw"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />

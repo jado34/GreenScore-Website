@@ -43,7 +43,7 @@ export function AboutTeam() {
             Meet the <span className="text-primary-50">Minds.</span>
           </h2>
           <p className="text-text-lg text-foreground/60 max-w-xl font-light">
-            We are Team 10. A multidisciplinary group united by a single vision: to gamify and reward real-world environmental impact.
+            We are GreenLume. A multidisciplinary team of engineers and designers united by a single vision: to gamify and reward real-world environmental impact.
           </p>
         </motion.div>
 

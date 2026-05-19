@@ -2,6 +2,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 function AnimatedNumber({ target, suffix = '', duration = 2000 }: { target: number; suffix?: string; duration?: number }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -72,9 +73,11 @@ export function AboutVision() {
         style={{ scale: bgScale }}
         className="absolute inset-0 z-0"
       >
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2000&auto=format&fit=crop"
           alt="Lush forest backdrop"
+          fill
+          sizes="100vw"
           className="w-full h-full object-cover"
         />
       </motion.div>
