@@ -3,6 +3,8 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Download, Leaf } from 'lucide-react';
 import { Magnetic } from './Magnetic';
+import { TextReveal } from './TextReveal';
+import Image from 'next/image';
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -20,15 +22,20 @@ export function Hero() {
       <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center text-center px-6">
         
         {/* Massive Typography */}
-        <motion.h1
+        <motion.div
           style={{ y: textY }}
-          initial={{ opacity: 0, filter: 'blur(10px)', y: 20 }}
-          animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] leading-[0.9] tracking-tighter font-medium text-foreground mb-6"
+          className="mb-6"
         >
-          Track beyond.
-        </motion.h1>
+          <TextReveal
+            mode="char"
+            delay={0.3}
+            stagger={0.025}
+            onScroll={false}
+            className="text-[3rem] sm:text-[5rem] md:text-[8rem] lg:text-[10rem] leading-[0.9] tracking-tighter font-medium text-foreground justify-center"
+          >
+            Track beyond.
+          </TextReveal>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -102,9 +109,12 @@ export function Hero() {
              </div>
           </motion.div>
 
-          <img 
+          <Image 
             src="/hero-app-mockup.png" 
-            alt="GreenScore App Mockup" 
+            alt="GreenLume App Mockup"
+            width={1200}
+            height={800}
+            priority
             className="w-full h-full object-contain object-center scale-100 group-hover:scale-[1.02] transition-transform duration-[2s]"
           />
         </motion.div>

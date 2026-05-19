@@ -20,6 +20,7 @@ Key Features
 - 🎮 Streaks, badges, and level progression
 - ⚡ One-tap action logging
 - 🌓 Dark and light mode support
- License
 
-Private and proprietary © 2026 GreenScore. All rights reserved.
+## License
+
+Private and proprietary © 2026 GreenLume. All rights reserved.

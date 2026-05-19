@@ -5,6 +5,7 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { Noise } from "@/components/Noise";
 import { Preloader } from "@/components/Preloader";
 import { Providers } from "@/components/Providers";
+import { ScrollProgress } from "@/components/ScrollProgress";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,19 +18,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GreenScore | Log Your Life. Save Your World.",
+  title: "GreenLume | Log Your Life. Save Your World.",
   description: "The award-winning sustainability tracker. Master 20+ daily habits and watch your impact grow from Seedling to Forest.",
   openGraph: {
-    title: "GreenScore | Log Your Life. Save Your World.",
+    title: "GreenLume | Log Your Life. Save Your World.",
     description: "The award-winning sustainability tracker. Master 20+ daily habits and watch your impact grow from Seedling to Forest.",
-    url: "https://greenscore.earth",
-    siteName: "GreenScore",
+    url: "https://greenlume.earth",
+    siteName: "GreenLume",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "GreenScore App Preview",
+        alt: "GreenLume App Preview",
       },
     ],
     locale: "en_US",
@@ -37,16 +38,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GreenScore | Log Your Life. Save Your World.",
+    title: "GreenLume | Log Your Life. Save Your World.",
     description: "The award-winning sustainability tracker. Master 20+ daily habits and watch your impact grow from Seedling to Forest.",
     images: ["/og-image.jpg"],
   },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: "/Logo/GreenLume_Icon_Logo_Green__1_-removebg-preview.png",
+    shortcut: "/Logo/GreenLume_Icon_Logo_Green__1_-removebg-preview.png",
+    apple: "/Logo/GreenLume_Icon_Logo_Green__1_-removebg-preview.png",
   },
-  metadataBase: new URL("https://greenscore.earth"),
+  metadataBase: new URL("https://greenlume.earth"),
 };
 
 
@@ -62,6 +63,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Providers>
+          <ScrollProgress />
           <Preloader />
           <CustomCursor />
           <Noise />

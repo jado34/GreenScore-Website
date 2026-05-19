@@ -2,6 +2,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Shield, Database, Globe, FlaskConical } from 'lucide-react';
+import { GlowCard } from './GlowCard';
 
 const standards = [
   {
@@ -70,12 +71,9 @@ export function AboutScience() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {standards.map((item, index) => (
-            <motion.div
+            <GlowCard
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1, duration: 0.8 }}
+              glowColor="rgba(76, 175, 80, 0.15)"
               className="group p-8 rounded-[2rem] bg-white/[0.03] border border-white/[0.06] hover:border-white/15 transition-all duration-500 hover:bg-white/[0.06]"
             >
               <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-primary-50/10 group-hover:border-primary-50/30 transition-all duration-500">
@@ -86,7 +84,7 @@ export function AboutScience() {
               </div>
               <div className="text-sm font-bold text-white/70 mb-2">{item.label}</div>
               <p className="text-white/40 text-xs leading-relaxed">{item.desc}</p>
-            </motion.div>
+            </GlowCard>
           ))}
         </div>
 

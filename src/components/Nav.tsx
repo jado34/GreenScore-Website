@@ -5,6 +5,7 @@ import { Download, Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { Magnetic } from './Magnetic';
+import { TextReveal } from './TextReveal';
 
 export function Nav() {
   const { theme, setTheme } = useTheme();
@@ -32,8 +33,11 @@ export function Nav() {
         <div className="flex items-center pointer-events-auto shrink-0 w-[150px] md:w-[200px]">
           <Link href="/">
             <img
-              src="/logo.png"
-              alt="GreenScore Logo"
+              src={mounted && theme === 'dark'
+                ? '/Logo/GreenLume_Primary_Logo_White_on_Green-removebg-preview.png'
+                : '/Logo/GreenLume_Primary_Logo_Green-removebg-preview.png'
+              }
+              alt="GreenLume Logo"
               className="w-full h-auto object-contain transition-transform hover:scale-105"
             />
           </Link>
@@ -127,7 +131,7 @@ export function CTA() {
     <section className="w-full py-32 px-6 relative overflow-hidden bg-foreground text-background">
       <div className="max-w-4xl mx-auto rounded-[3rem] overflow-hidden relative">
         <div className="relative z-20 px-8 py-20 md:py-32 text-center">
-          <h2 className="text-[3.5rem] md:text-[5rem] font-medium tracking-tight mb-6 leading-[1.1]">Join the Waitlist.</h2>
+          <TextReveal mode="word" className="text-[3.5rem] md:text-[5rem] font-medium tracking-tight mb-6 leading-[1.1] justify-center">Join the Waitlist.</TextReveal>
           <p className="text-text-lg md:text-text-xl text-background/60 max-w-2xl mx-auto mb-10 font-normal">
             Be the first to experience the future of sustainability tracking.
           </p>
